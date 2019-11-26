@@ -1,0 +1,10 @@
+<%= form_for [@user, @message] do |f| %>
+     <%= hidden_field_tag :sender_id, current_user.id %>
+     <%= f.text_area :text %>
+     <%= f.submit %>
+<% end %>
+
+<% provide(:title, "Send Message") %>
+<h1> Send Message </h1>
+
+

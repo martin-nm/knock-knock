@@ -1,0 +1,105 @@
+
+
+.btn-flat {
+  background:$purple;
+  padding: 8px 24px;
+  border-radius: 3px;
+  color: $white !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  border-width: 0px;
+
+}
+.btn-flat.search-btn-flat {
+  height: 38px;
+  padding: 9px 18px;
+  margin-left: -9px;
+
+
+}
+
+
+
+
+.btn-flat:hover {
+  color: $white !important;
+  background: $purple;
+  opacity: 0.9;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+
+.btn-secondary {
+  background:$white;
+  padding: 8px 22px;
+  border-radius: 3px;
+  color: $purple !important;
+  border: 1px solid $purple !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+
+  // a {
+  //     color: $purple ;
+  //     text-decoration: none;
+  //     &:hover {
+  //       color: $white ;
+  //       background: $purple ;
+  //     }
+
+  // }
+}
+
+.btn-secondary:hover {
+  background: $purple;
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+#btn-width{
+  width: 213px;
+  margin-right: 50 px;
+}
+
+.create-btn-container {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.btn-link {
+
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color:$purple;
+  font-size: 16px;
+  text-decoration: underline;
+
+
+}
+
+
+.btn-link:hover {
+  color: #2B1040;
+  transition: background 0.3s ease;
+  opacity: 0.9;
+}
+
+.btn-home {
+  color:$white;
+  font-size: 16px;
+  text-decoration: underline;
+  letter-spacing:1px;
+
+}
+
+.btn-home:hover {
+  color:$purple;
+  transition: background 0.3s ease;
+
+
+}

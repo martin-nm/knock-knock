@@ -1,1 +1,27 @@
-// Specific CSS for your home-page
+.home_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("freelance.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  color: $white;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+
+.card-presentation {
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: auto;
+  width: 350px;
+  color: $purple;
+  padding: 0px 5px 0px 5px;
+
+  img {
+    height: 250px;
+    width: 300px;
+  }
+}

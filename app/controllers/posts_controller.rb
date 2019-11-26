@@ -11,8 +11,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    raise
     if @post.save
+      @post.expires_at = @post.created_at + 86400
+      @post.save
       redirect_to posts_path
     else
       render :new
@@ -20,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post_params = Post.find(params[:id])
+    @post = Post.find(params[:id])
     if @post.destroy
       redirect_to posts_path
     else

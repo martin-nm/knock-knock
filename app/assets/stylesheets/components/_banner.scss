@@ -1,0 +1,43 @@
+.banner {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background: no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+  background-size: cover;
+  // background-position: center;
+  padding: 170px 0;
+  height: 100vh;
+}
+.calendar {
+  padding-right: 40px;
+  padding: 10px;
+  form label {
+    color: $white;
+  }
+  input {
+    width: auto;
+  }
+}
+.title {
+  padding-left: 40px;
+}
+.banner h1 {
+  margin: 0;
+  color: $white;
+  font-size: 44px;
+  font-weight: bold;
+}
+.banner p {
+  font-size: 20px;
+  color: $white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

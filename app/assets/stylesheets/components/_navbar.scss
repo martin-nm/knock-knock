@@ -1,12 +1,83 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-}
+  background: $dark-purple;
+  height: 110px;
+  padding: 0rem 1rem;
+  margin-top: -16px;
 
-.navbar-lewagon .navbar-collapse {
+.navbar-collapse {
   flex-grow: 0;
+
+  .nav-link {
+    color: $white;
+    opacity: 0.8;
+    letter-spacing: 2px;
+
+    &:hover {
+      font-weight: bolder;
+      color: $purple;
+    }
+  }
+
+    .nav-link.active {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  .navbar-brand img {
+    width: 110px;
+    margin-left: 25px;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.profile-pic-pos{
+    padding-right: 20px;
+}
+
+.navbar-links {
+  padding-top: 20px;
+  margin-right: auto;
+  position: relative;
+  left: 10%
+}
+
+.navbar-links a {
+  color: $white;
+  letter-spacing: 2px;
+  opacity: 0.3;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+.navbar-links a:hover {
+  opacity: 1;
+}
+
+.align-text {
+  text-align: right;
+  letter-spacing: 2px;
+}
+
+
+.dropdown-items {
+    color: $dark-gray;
+  font-weight:bolder;
+  font-size: 14px;
+  display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-users {
+
+  font-weight:bolder;
+  padding: 0.25rem 1.5rem;
+  color:  $purple;
+
 }

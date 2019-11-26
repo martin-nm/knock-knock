@@ -1,0 +1,10 @@
+
+<h1>Create a Post</h1>
+<%= simple_form_for [@post] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :content %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+<p><%= link_to "See all posts", posts_path  %></p>
+

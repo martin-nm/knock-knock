@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contact
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :new, :create, :destroy]
+  resources :messages, only: [:index, :new, :create]
 end

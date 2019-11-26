@@ -5,6 +5,5 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    redirect_to users_path
   end
 end

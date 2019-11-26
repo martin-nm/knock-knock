@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :new, :create, :destroy]
+  resources :messages, only: [:index, :new, :create]
 end

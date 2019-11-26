@@ -1,0 +1,19 @@
+.search-test {
+  border-radius: 3px;
+  border: 1px solid $purple;
+  font-weight:lighter;
+  color: $red-purple;
+}
+
+.search-test.home {
+  color: $white !important;
+  background: $dark-gray;
+  opacity:0.7;
+  display: inline-block;
+  border: 0;
+
+  }
+
+.align-margin {
+  padding-left: 0 !important;
+}

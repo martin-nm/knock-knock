@@ -1,7 +1,7 @@
 
   <div class="navbar-frame ">
     <div class="avatar"></div>
-    <h1>Curent user name</h1>
+    <h1><%= current_user&.first_name %></h1>
     <div class="menu-title">Messages</div>
     <div class="menu-title"><%= link_to 'Feed', posts_path %></div>
     <div class="menu-title">Profil</div>

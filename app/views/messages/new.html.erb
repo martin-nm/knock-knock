@@ -2,27 +2,20 @@
 
 <div class="row">
   <div class= "col-md-6 col-md-offset-3">
-    <%= simple_form_for [@user, @message] do |f| %>
+    <%= simple_form_for([@user, @message], remote: true) do |f| %>
       <%= f.input :text, placeholder: "Type your message", label: false %>
       <%= f.submit "Send", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-
-<h1> Chat </h1>
-<div class="col">
+<div class="main-container">
   <% @messages.each do |message| %>
-    <div class="message-content">
-      <p class="mb-1">Message:<%= message.text %></p>
-      <div class="text-right">
-        <small>
-          <%= message.created_at %>
-        </small>
-      </div>
-    </div>
+    <%= render 'message', message: message %>
   <% end %>
 </div>
+
+
 
 
 

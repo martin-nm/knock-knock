@@ -11,15 +11,15 @@
             <%= f.input :first_name,
                         required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "Name" }%>
+                        input_html: { autocomplete: "first_name" }%>
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "email" }%>
+                        input_html: { autocomplete: "last_name" }%>
+            <%= f.input :photo, as: :file %>
             <%= f.input :job,
                         required: false,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" }%>
+                        autofocus: true %>
             <%= f.input :email,
                         required: true,
                         autofocus: true,

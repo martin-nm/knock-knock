@@ -9,5 +9,5 @@ initMapbox();
 initAutocomplete();
 
 if (document.querySelector('#banner-typed-text')) {
-  iloadDynamicBannerText();
+  loadDynamicBannerText();
 }

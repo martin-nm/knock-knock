@@ -1,7 +1,31 @@
 .navbar-frame {
-  width: 21vw;
+  width: 20vw;
+  min-width: 180px;
   height: 100vh;
   position: sticky;
   top:0;
   background-color: $purple;
+  color: $white;
+
+}
+
+
+.menu-title {
+  padding: 13px;
+  height: 55px;
+  width: 20vw;
+  min-width: 180px;
+  margin: -2px;
+  padding: 12px;
+}
+
+
+
+.menu-title:hover {
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3));
+}
+
+.menu-title:active {
+  background-color: $middle-purple;
+  opacity: 0.8;
 }

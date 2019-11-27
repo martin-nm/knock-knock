@@ -1,8 +1,8 @@
 .btn-flat {
-  background:$purple;
+  background:$corail;
   padding: 8px 24px;
   border-radius: 3px;
-  color: $white !important;
+  color: $light-corail !important;
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bolder;
@@ -16,8 +16,8 @@
 }
 
 .btn-flat:hover {
-  color: $white !important;
-  background: $purple;
+  color: $corail !important;
+  background: $light-corail;
   opacity: 0.9;
   transition: background 0.3s ease;
   text-decoration: none;

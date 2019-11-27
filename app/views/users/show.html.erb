@@ -7,7 +7,9 @@
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
         <h2>"<%= @user.status %>"</h2>
         <p><%= @user.job %></p>
-        <a href="" class ="btn-flat">Start a discussion</a>
+        <div class = "btn-start">
+          <%= link_to "Start a discussion", new_user_message_path(@user.id), class: "btn-flat" %>
+        </div>
       </div>
     </div>
   </div>

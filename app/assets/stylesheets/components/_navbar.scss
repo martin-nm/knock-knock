@@ -1,16 +1,16 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $dark-purple;
   height: 110px;
   padding: 0rem 1rem;
   margin-top: -16px;
+  background-color: transparent;
 
 
 .navbar-collapse {
   flex-grow: 0;
 
   .nav-link {
-    color: $white;
+    color: $purple;
     opacity: 0.8;
     letter-spacing: 2px;
 
@@ -32,9 +32,6 @@
   }
 }
 
-.profile-pic-pos{
-    padding-right: 20px;
-}
 
 .navbar-links {
   padding-top: 20px;
@@ -44,7 +41,7 @@
 }
 
 .navbar-links a {
-  color: $white;
+  color: $purple;
   letter-spacing: 2px;
   opacity: 0.3;
   text-decoration: none;
@@ -60,25 +57,4 @@
 }
 
 
-.dropdown-items {
-    color: $dark-gray;
-  font-weight:bolder;
-  font-size: 14px;
-  display: block;
-    width: 100%;
-    padding: 0.25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-}
-.dropdown-users {
 
-  font-weight:bolder;
-  padding: 0.25rem 1.5rem;
-  color:  $purple;
-
-}

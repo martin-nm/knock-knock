@@ -16,7 +16,8 @@ aline = User.new(first_name: "Aline",
   password:"123456",
   job: "Graphic Designer",
   bio: "Just begging my freelance life, tips for work organisation are welcomming",
-  status:"Workin' at @numa café")
+  status:"Workin' at @numa café",
+  location: "1 rue de la roquette, paris, france")
 aline.save!
 
 louis = User.new(first_name: "Louis",
@@ -24,7 +25,8 @@ louis = User.new(first_name: "Louis",
   email: "louis-seguin@gmail.com",
   password:"123456", job: "Developper",
   bio: "I'm Reactjs Java Firebase developper based in Paris, working remotely",
-  status:"Hey knockies, I'm Searching for missions in the Travel & Tourism sectors")
+  status:"Hey knockies, I'm Searching for missions in the Travel & Tourism sectors",
+  location: "1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris")
 louis.save!
 
 sam = User.new(first_name: "Sam",
@@ -33,7 +35,8 @@ email: "sam-lee@gmail.com",
 password:"123456",
 job: "Data Analyst",
 bio: "Young co-founder of a company specialized in the Web Scrapping",
-status:"")
+status:"",
+location: "44 Rue François 1er, 75008 Paris")
 sam.save!
 
 puts 'Creating posts...'

@@ -1,7 +1,7 @@
 .cards {
   margin: 8px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: auto;
   grid-gap: 16px;
 
@@ -34,14 +34,14 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -50,7 +50,10 @@
   background: $white;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   border-radius: 8px;
-  height:auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-post h2 {
@@ -90,13 +93,17 @@
   color: $middle-gray;
 }
 
-.card-post .card-post-content {
+.card-post-content {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
   color: $middle-gray;
+}
+
+.content {
+  font-size: 14px;
 }
 
 .card-post:hover {
@@ -124,12 +131,29 @@ height: 20px;
   text-align: right;
 }
 
-.div-delete{
-  height: 12%;
+.btn-delete {
+  background:$white;
+  padding: 1px 22px;
+  border-radius: 8px;
+  color: $purple !important;
+  border: 1px solid $purple !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  border-radius: 0px 0px 8px 8px;
+  display: block;
+  width: 100%;
 }
 
-.delete {
-  width: 100%;
-  display: block;
-  border-radius: 0px 0px 8px 8px;
+.btn-delete:hover {
+  background: $purple;
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.card-center {
+  flex-grow: 1;
 }

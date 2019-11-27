@@ -2,31 +2,34 @@
 
   <% @posts.each do |post| %>
   <div class="card-post">
+
     <div class="flexbox cat-remove mb-0">
       <div><h6></h6></div>
       <div class="category"><h6><%= post.category %></h6></div>
       <div class="remove"><h6>💣</h6></div>
     </div>
 
-    <div class="flexbox card-post-info p-1">
+    <div class="card-center">
+      <div class="flexbox card-post-info p-1">
+        <div>
+          <%= image_tag "Pripri.png", :class => "avatar-small" %>
+        </div>
+        <div class="user-created">
+          <h5 class="user mb-0"><%= post.user.first_name %></h5>
+          <h5 class="created"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
+        </div>
+      </div>
       <div>
-        <%= image_tag "Pripri.png", :class => "avatar-small" %>
+        <h2 class="card-post-title pl-1"><%= post.title %></h2>
       </div>
-      <div class="user-created">
-        <h5 class="user mb-0"><%= post.user.first_name %></h5>
-        <h5 class="created"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
+      <div class="card-post-content">
+        <p class="content"><%= post.content %></p>
       </div>
-    </div>
-    <div>
-      <h2 class="card-post-title pl-1"><%= post.title %></h2>
-    </div>
-    <div class="card-post-content">
-      <p><%= post.content %></p>
     </div>
 
     <div class="div-delete">
       <% if post.user == current_user %>
-        <%= link_to "delete post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-secondary delete" %>
+        <%= link_to "delete post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-delete" %>
       <% else %>
       <% end %>
     </div>

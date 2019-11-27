@@ -11,12 +11,10 @@
 
 
 .menu-title {
-  background-color: $corail;
   padding: 13px;
   height: 55px;
   width: 20vw;
   min-width: 180px;
-  background-color: #ff8377;
   margin: -2px;
   padding: 12px;
 }
@@ -24,5 +22,10 @@
 
 
 .menu-title:hover {
-  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3));
+}
+
+.menu-title:active {
+  background-color: $middle-purple;
+  opacity: 0.8;
 }

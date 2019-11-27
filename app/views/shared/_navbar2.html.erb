@@ -2,9 +2,9 @@
   <div class="navbar-frame p-4 ">
     <div class="avatar"></div>
     <h1 class="navbar-name pb-5">Hey <%=current_user.first_name %> </h1>
-    <div class="menu-title">Messages</div>
-    <div class="menu-title"><%= link_to 'Feed', posts_path %></div>
-    <div class="menu-title">Profil</div>
+    <div class="menu-title"><p class="navbar-title" >Messages</p></div>
+    <div class="menu-title"><p class="navbar-title"><%= link_to 'Feed', posts_path %></p></div>
+    <div class="menu-title"><p class="navbar-title">Profil</p></div>
   </div>
 <% else %>
   <div class="navbar-frame p-4 ">

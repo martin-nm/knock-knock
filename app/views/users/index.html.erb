@@ -5,7 +5,13 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-<% @users.each do |user| %>
-  <h2>Name: <%= user.first_name %>, <%= user.last_name %></h2>
-  <p>Job: <%= user.job %></p>
-<% end %>
+<div class="cards">
+  <% @users.each do |user| %>
+    <div class="card-post">
+      <%= link_to(user_path(user)) do %>
+        <h2><%= user.first_name %>, <%= user.last_name %></h2>
+        <p><%= user.job %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

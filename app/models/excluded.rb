@@ -1,0 +1,2 @@
+class Excluded < ApplicationRecord
+end

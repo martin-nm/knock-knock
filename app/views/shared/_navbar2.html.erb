@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <div class="navbar-frame p-4 ">
-    <div class="avatar"></div>
+    <div class="avatar"><%= cl_image_tag current_user.photo.key, class: "avatar-large"%></div>
     <h1 class="navbar-name pb-5">Hey <%=current_user.first_name %> </h1>
     <div class="menu-title"><p class="navbar-title" >Messages</p></div>
     <div class="menu-title"><p class="navbar-title"><%= link_to 'Feed', posts_path %></p></div>

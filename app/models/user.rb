@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :messages
 
+
+
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
   # has_many :sent_messages, class_name: "Message", foreign_key: "sender_id"

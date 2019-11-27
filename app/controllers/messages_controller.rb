@@ -2,6 +2,8 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     @user = User.find(params[:user_id])
+    user_id = params[:user_id]
+    @messages = Message.where('sender_id  = ? AND recipient_id = ? OR sender_id  = ? AND recipient_id = ?' , current_user.id, user_id,user_id, current_user.id)
   end
 
   def create

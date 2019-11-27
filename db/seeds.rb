@@ -8,6 +8,7 @@
 
 # db/seeds.rb
 Post.destroy_all
+Message.destroy_all
 User.destroy_all
 puts 'Creating users...'
 aline = User.new(first_name: "Aline",

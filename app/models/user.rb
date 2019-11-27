@@ -7,9 +7,10 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :job, presence: true
   validates :email, presence: true
-  # validates :bio, presence: true
+  validates :photo, presence: true
   has_many :posts
   has_many :messages
+  has_one_attached :photo
 
 
 

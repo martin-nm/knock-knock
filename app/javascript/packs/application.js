@@ -8,6 +8,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 initMapbox();
 initAutocomplete();
 
+
 if (document.querySelector('#banner-typed-text')) {
   loadDynamicBannerText();
 }

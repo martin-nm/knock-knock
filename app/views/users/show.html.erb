@@ -4,12 +4,14 @@
     <div class= "card-all-info  d-flex justify-content-start" >
       <img class ="avatar-large m-4" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
       <div class= card-global-info>
-        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <h2>"<%= @user.status %>"</h2>
-        <p><%= @user.job %></p>
+        <h4 class="middle-size"><%= @user.first_name %> <%= @user.last_name %></h4>
+        <h3 class="small-size pb-2">"<%= @user.status %>"</h3>
+        <h2 class ="small-size mb-3"><%= @user.job.upcase %></h2>
         <div class = "btn-start">
-          <%= link_to "Start a discussion", new_user_message_path(@user.id), class: "btn-flat" %>
-        </div>
+          <div class= "mt-4 ">
+              <%#= link_to "DISCOVER YOUR NEXT COWORKERS" , users_path, class: 'btn-flat' %>
+              <%= link_to render("shared/button", text: "START TO CHAT"), new_user_message_path(@user.id) %>
+            </div>
       </div>
     </div>
   </div>

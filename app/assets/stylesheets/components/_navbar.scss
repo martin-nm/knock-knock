@@ -8,11 +8,11 @@
 
 .navbar-collapse {
   flex-grow: 0;
+  margin-right: 45px;
 
   .nav-link {
-    color: $purple;
-    opacity: 0.8;
-    letter-spacing: 2px;
+
+
 
     &:hover {
       font-weight: bolder;
@@ -21,11 +21,11 @@
   }
 
     .nav-link.active {
-      color: $white;
+      color: $purple;
       opacity: 1;
     }
   }
-
+//LOGO
   .navbar-brand img {
     width: 227px;
     margin-left: 31px;
@@ -33,28 +33,6 @@
 }
 
 
-.navbar-links {
-  padding-top: 20px;
-  margin-right: auto;
-  position: relative;
-  left: 10%
-}
-
-.navbar-links a {
-  color: $purple;
-  letter-spacing: 2px;
-  opacity: 0.3;
-  text-decoration: none;
-  padding: 0px 10px;
-}
-.navbar-links a:hover {
-  opacity: 1;
-}
-
-.align-text {
-  text-align: right;
-  letter-spacing: 2px;
-}
 
 
 

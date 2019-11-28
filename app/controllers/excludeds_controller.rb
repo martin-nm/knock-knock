@@ -4,10 +4,7 @@ class ExcludedsController < ApplicationController
     @excluded = Excluded.new
     @excluded.user = current_user
     @excluded.post = Post.find(params[:post_id])
-    if @excluded.save
-      redirect_to posts_path
-    else
-      render :new
-    end
+    @excluded.save
+    redirect_to posts_path
   end
 end

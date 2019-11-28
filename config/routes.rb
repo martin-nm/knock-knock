@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     resources :messages, only: [ :new, :create ]
   end
 
-  resources :posts, only: [ :index, :new, :create, :destroy ]
+  resources :posts, only: [ :index, :new, :create, :destroy ] do
+    resources :excludeds, only: [ :create ]
+  end
 end

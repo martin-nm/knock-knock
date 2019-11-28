@@ -6,7 +6,9 @@
     <div class="flexbox cat-remove mb-0">
       <div><h6></h6></div>
       <div class="category"><h6><%= post.category %></h6></div>
-      <div class="remove"><h6>💣</h6></div>
+      <div class="remove">
+      <%= link_to "💣", post_excludeds_path(post), method: :post %>
+      </div>
     </div>
 
     <div class="card-center">

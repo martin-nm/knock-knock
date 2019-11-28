@@ -31,5 +31,6 @@
     <%end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <input type="hidden" id="user-id" value="<%= current_user&.id %>" />
   </body>
 </html>

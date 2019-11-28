@@ -11,7 +11,7 @@
 
 <div class="main-container">
   <% @messages.each do |message| %>
-    <%= render 'message', message: message %>
+    <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
   <% end %>
 </div>
 

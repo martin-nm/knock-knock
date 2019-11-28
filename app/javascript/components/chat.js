@@ -20,13 +20,14 @@ const initChat = () => {
             if (data["message"]["sender_id"] == currentConversationRecipientId) {
               const messages = document.querySelector('.messages-container');
               messages.insertAdjacentHTML('afterbegin', data["message_html"]);
+            } else {
+              window.alert("You have a new conversation!")
             }
-
             // 1b. if this conversation page is with an other user:
             //   send a notif
+          } else {
+            window.alert("You have a new message!")
           }
-
-
           // 2. if we are on any other page, else:
           // display a notif window.alert
         },

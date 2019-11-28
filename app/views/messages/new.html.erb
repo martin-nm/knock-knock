@@ -9,14 +9,14 @@
   </div>
 </div>
 
-<div class="main-container">
+<div class="messages-container">
   <% @messages.each do |message| %>
     <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
   <% end %>
 </div>
 
 
-
+<input type="hidden" id="recipient-id" value="<%= @user.id %>">
 
 
 

@@ -8,11 +8,26 @@ const initChat = () => {
       { channel: "ChatChannel", user_id: userId },
       {
         received(data) {
-          // if we are on the right message page:
-          // append the message html :
-          const messages = document.querySelector('.main-container');
-          messages.insertAdjacentHTML('afterbegin', data["message_html"]);
-          // if we are on any other page, else:
+          // 1. if we are on a conversation page:
+
+
+          if (document.querySelector(".messages-container")) {
+            // 1a. if this conversation page is with the right other user
+            // if the received message's sender_id is the same as the current conversation's page user id
+            const currentConversationRecipientId = parseInt(document.querySelector("#recipient-id").value, 10);
+            console.log(currentConversationRecipientId)
+            console.log(data)
+            if (data["message"]["sender_id"] == currentConversationRecipientId) {
+              const messages = document.querySelector('.messages-container');
+              messages.insertAdjacentHTML('afterbegin', data["message_html"]);
+            }
+
+            // 1b. if this conversation page is with an other user:
+            //   send a notif
+          }
+
+
+          // 2. if we are on any other page, else:
           // display a notif window.alert
         },
       }

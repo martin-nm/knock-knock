@@ -1,5 +1,5 @@
 
-<div class="light-container <%= 'darker' if current_user_role == :recipient %>">
+<div class="card-user m-2 <%= 'darker' if current_user_role == :recipient %>">
 
   <% if message.sender.photo.attached? %>
     <div class="avatar-small"><%= cl_image_tag message.sender.photo.key, height:40, width:40%></div>

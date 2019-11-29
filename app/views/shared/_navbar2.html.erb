@@ -1,16 +1,18 @@
 <% if user_signed_in? %>
   <div class="navbar-frame p-4 ">
-    <% if current_user.photo.attached? %>
-      <div class="avatar"><%= cl_image_tag current_user.photo.key, height:120, width:120, class: "avatar-large"%></div>
-    <% end %>
-    <h1 class="navbar-name pb-5">Hey <%=current_user.first_name %> </h1>
-    <button class='btn-flat' id='localize'>Locate me</button>
+    <div>
+      <% if current_user.photo.attached? %>
+        <div class="avatar"><%= cl_image_tag current_user.photo.key, height:120, width:120, class: "avatar-large"%></div>
+      <% end %>
+      <h1 class="hey-user" style="font-size: 24px; margin-top: 20px; margin-bottom: 20px;">Hey <%=current_user.first_name %> </h1>
+      <div class="pb-5"><button class='btn-primari btn-locate' id='localize'>   Locate me   </button></div>
+    </div>
     <!-- <button class='btn-flat' id='2'>2kms</button> -->
     <!-- <button class='btn-flat' id='5'>5kms</button> -->
     <!-- <button class='btn-flat' id='10'>10kms</button> -->
-    <div class="menu-title"><p class="navbar-title" >Messages</p></div>
-    <div class="menu-title"><p class="navbar-title"><%= link_to 'Feed', posts_path %></p></div>
-    <div class="menu-title"><p class="navbar-title">Profil</p></div>
+    <div class="menu-title"><h5 class="menu-titles">Messages</h5></div>
+    <div class="menu-title"><h5 class="menu-titles"><%= link_to 'Feed', posts_path, class: "menu-titles" %></h5></div>
+    <div class="menu-title"><h5 class="menu-titles">Profil</h5></div>
   </div>
 <% else %>
   <div class="navbar-frame p-4 ">

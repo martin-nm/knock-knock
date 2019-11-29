@@ -3,12 +3,10 @@
    border-radius: 50px;
    height:38px;
    width:fit-content;
-   padding-left: 19px;
+   padding: 19px 10px;
    text-decoration:none;
 
-   .small-size:hover {
-    text-decoration: none;
-   }
+
 }
 
 .btn-primari:hover {
@@ -16,37 +14,40 @@
   text-decoration: none;
 }
 
-.btn-flat {
-  background:$corail;
-  padding: 8px 24px;
-  border-radius: 50px;
-  color: $light-corail !important;
-  font-size: 16px;
-  font-weight: bolder;
-  border-width: 0px;
+// .btn-flat {
+//   background:$corail;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   color: $light-corail !important;
+//   font-size: 16px;
+//   font-weight: bolder;
+//   border-width: 0px;
 
-}
+// }
 
-.btn-flat.search-btn-flat {
-  height: 38px;
-  padding: 9px 18px;
-  margin-left: -9px;
-}
+// .btn-flat.search-btn-flat {
+//   height: 38px;
+//   padding: 9px 18px;
+//   margin-left: -9px;
+// }
 
-.btn-flat:hover {
-  color: $corail !important;
-  background: $light-corail;
-  opacity: 0.9;
-  transition: background 0.3s ease;
-  text-decoration: none;
-}
+// .btn-flat:hover {
+//   color: $corail !important;
+//   background: $light-corail;
+//   opacity: 0.9;
+//   transition: background 0.3s ease;
+//   text-decoration: none;
+// }
 
 .btn-secondary {
-  background:$white;
-  padding: 8px 22px;
   border-radius: 50px;
-  color: $purple !important;
-  border: 1px solid $purple !important;
+  height:38px;
+  width:fit-content;
+  padding: 19px;
+  text-decoration:none;
+  background:$white;
+  color: $corail !important;
+  border: 1px solid $corail !important;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
@@ -64,46 +65,30 @@
 }
 
 .btn-secondary:hover {
-  background: $purple;
+  background: $corail;
   transition: background 0.3s ease;
   color: $white !important;
   opacity: 0.9;
   text-decoration: none;
 }
 
-#btn-width{
-  width: 213px;
-  margin-right: 50 px;
-}
 
-.create-btn-container {
-  display:flex;
-  justify-content: flex-end;
-}
+
 
 .btn-link {
 
   letter-spacing: 1px;
   font-weight: bolder;
-  color:$purple;
+  color:$corail;
   font-size: 16px;
   text-decoration: underline;
-}
-
-.btn-link:hover {
-  color: #2B1040;
-  transition: background 0.3s ease;
   opacity: 0.9;
 }
 
-.btn-home {
-  color:$white;
-  font-size: 16px;
-  text-decoration: underline;
-  letter-spacing:1px;
+.btn-link:hover {
+  color:$corail ;
+  transition: background 0.3s ease;
+
 }
 
-.btn-home:hover {
-  color:$purple;
-  transition: background 0.3s ease;
-}
+

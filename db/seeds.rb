@@ -11,6 +11,9 @@ Post.destroy_all
 Message.destroy_all
 User.destroy_all
 puts 'Creating users...'
+
+file = URI.open('https://unsplash.com/photos/u3WmDyKGsrY')
+
 aline = User.new(first_name: "Aline",
   last_name: "Michet",
   email: "aline-michet@gmail.com",
@@ -19,6 +22,7 @@ aline = User.new(first_name: "Aline",
   bio: "Just begging my freelance life, tips for work organisation are welcomming",
   status:"Workin' at @numa café",
   location: "1 rue de la roquette, paris, france")
+aline.photo.attach(io: file, filename: 'aline', content_type: 'image/jpeg')
 aline.save!
 
 louis = User.new(first_name: "Louis",

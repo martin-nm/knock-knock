@@ -17,9 +17,9 @@ const submit = document.querySelector('#submit-button');
 
 
 input.addEventListener('focus', (event) => {
-  console.log("marche");
   input.addEventListener('keypress', (e) => {
     if (e.key === "Enter") {
+  console.log("marche");
       submit.click();
     }
   })

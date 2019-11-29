@@ -2,6 +2,10 @@
   <div class="navbar-frame p-4 ">
     <div class="avatar"><%= cl_image_tag current_user.photo.key, height:120, width:120, class: "avatar-large"%></div>
     <h1 class="navbar-name pb-5">Hey <%=current_user.first_name %> </h1>
+    <button class='btn-flat' id='localize'>Locate me</button>
+    <!-- <button class='btn-flat' id='2'>2kms</button> -->
+    <!-- <button class='btn-flat' id='5'>5kms</button> -->
+    <!-- <button class='btn-flat' id='10'>10kms</button> -->
     <div class="menu-title"><p class="navbar-title" >Messages</p></div>
     <div class="menu-title"><p class="navbar-title"><%= link_to 'Feed', posts_path %></p></div>
     <div class="menu-title"><p class="navbar-title">Profil</p></div>
@@ -12,4 +16,5 @@
     <%= link_to 'Home', root_path %>
   </div>
 <% end %>
+
 

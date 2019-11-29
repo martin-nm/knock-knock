@@ -6,6 +6,7 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 <div class="cards">
+  <!-- render partial user_cards -->
   <% @users.each do |user| %>
     <div class="card-post">
       <%= link_to(user_path(user)) do %>
@@ -16,3 +17,5 @@
     </div>
   <% end %>
 </div>
+
+<%#= link_to "TEST", users_path(latitude: 48.8656, longitude: 2.3789894, range: 2) %>

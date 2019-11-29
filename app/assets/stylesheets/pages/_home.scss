@@ -20,6 +20,8 @@
   width: 350px;
   color: $purple;
   padding: 0px 5px 0px 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 
   img {
     height: 250px;
@@ -28,8 +30,10 @@
 }
 
 .presentation-home {
-  margin-left: 150px;
+  margin-left: 50px;
+}
 
-
-
+.anime-js {
+  min-height: 38px;
+  min-width: 400px;
 }

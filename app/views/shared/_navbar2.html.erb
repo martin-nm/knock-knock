@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
   <div class="navbar-frame p-4 ">
-    <div class="avatar"><%= cl_image_tag current_user.photo.key, height:120, width:120, class: "avatar-large"%></div>
+    <% if current_user.photo.attached? %>
+      <div class="avatar"><%= cl_image_tag current_user.photo.key, height:120, width:120, class: "avatar-large"%></div>
+    <% end %>
     <h1 class="navbar-name pb-5">Hey <%=current_user.first_name %> </h1>
     <button class='btn-flat' id='localize'>Locate me</button>
     <!-- <button class='btn-flat' id='2'>2kms</button> -->

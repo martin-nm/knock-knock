@@ -15,14 +15,14 @@
 }
 
 /* Clear floats */
-.container::after {
+.light-container::after {
   content: "";
   clear: both;
   display: table;
 }
 
 /* Style images */
-.container img {
+.light-container img {
   float: left;
   max-width: 60px;
   width: 100%;
@@ -31,7 +31,7 @@
 }
 
 /* Style the right image */
-.container img.right {
+.light-container img.right {
   float: right;
   margin-left: 20px;
   margin-right:0;

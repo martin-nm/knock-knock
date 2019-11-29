@@ -1,6 +1,6 @@
 
-<div class="light-container <%= 'darker' if message.sender != current_user %>">
-  <img src="/w3images/bandmember.jpg" alt="Avatar" class="<%= 'right' if message.sender != current_user %>">
+<div class="light-container <%= 'darker' if current_user_role == :recipient %>">
+  <img src="/w3images/bandmember.jpg" alt="Avatar" class="<%= 'right' if current_user_role == :recipient %>">
   <p class="mb-1"><%= message.sender.first_name %>: <%= message.text %></p>
   <div class="text-right">
     <small>

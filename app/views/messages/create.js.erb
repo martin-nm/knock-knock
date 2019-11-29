@@ -1,8 +1,9 @@
 
 function addMessage(messageHTML) {
-  const messages = document.querySelector('.main-container');
+  const messages = document.querySelector('.messages-container');
   messages.insertAdjacentHTML('afterbegin', messageHTML);
+  document.querySelector("#new_message").reset();
 }
 
 
-addMessage('<%= j render "message", message: @message %>');
+addMessage('<%= j render "message", message: @message, current_user_role: @message.sender == current_user ? :sender : :recipient %>');

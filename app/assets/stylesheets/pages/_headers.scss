@@ -1,38 +1,75 @@
 
-//bold title round
+//titre principaux
 h1 {
-  font-family: $headers-font;
-  font-size: 35px;
+  font-family: $body-font;
   font-weight: bold;
   letter-spacing:1px;
+  color: $dark-gray;
+}
+
+
+
+//sous titre uppercase gris
+h2{
+  color:$middle-purple;
+  letter-spacing:1px;
+  opacity: 0.6;
+  font-family:$body-font;
+  font-weight:bold;
+
+}
+
+
+//petites phrases en purple
+h3 {
   color: $middle-purple;
-}
-
-h1.navbar-name {
-  font-size: 20px;
-  text-align: center;
-  color: $white;
+  font-family: $body-font;
+  font-weight: bolder;
 }
 
 
+//user name
 
-//bold title round
-h2 {
+h4 {
+  font-family:$headers-font;
+  color: $dark-gray;
+  letter-spacing:1px;
+  font-weight:bold;
 
-  color:$purple;
-  font-size: 20px;
 }
 
+//button text
+h5 {
+  color: $light-corail;
+  font-family: $body-font;
+  font-weight:bold;
+
+
+}
+
+//random text
 
  p {
+  color: $middle-purple;
+  opacity:0.4;
   font-family: $body-font;
-  color: $middle-gray;
-  font-size: 19px;
   font-weight: lighter;
-  text-decoration:none;
+  line-height:16px;
 }
 
-p.navbar-title  {
- color:white;
- text-decoration:none;
+
+// different size
+.xsmall-size {
+  font-size:8px;
+}
+.small-size {
+  font-size:16px;
+}
+
+.middle-size {
+  font-size:32px;
+}
+
+.big-size {
+  font-size:48px;
 }

@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   def index
+
+    # Si params présent
+      # @user filtré avec .near
+    # else
     @users = User.geocoded
+    # end
     @markers = @users.map do |user|
       {
        lat: user.latitude,

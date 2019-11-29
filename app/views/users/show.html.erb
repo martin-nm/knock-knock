@@ -9,7 +9,9 @@
         <h2 class ="small-size mb-3"><%= @user.job.upcase %></h2>
         <div class = "btn-start">
           <div class= "mt-4 ">
-              <%#= link_to "DISCOVER YOUR NEXT COWORKERS" , users_path, class: 'btn-flat' %>
+                          <%= link_to "DISCOVER YOUR NEXT COWORKERS" , users_path, class: 'btn-link' %>
+
+              <%= link_to "DISCOVER YOUR NEXT COWORKERS" , users_path, class: 'btn-secondary' %>
               <%= link_to render("shared/button", text: "START TO CHAT"), new_user_message_path(@user.id) %>
             </div>
       </div>

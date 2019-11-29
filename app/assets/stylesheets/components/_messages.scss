@@ -1,18 +1,30 @@
+.messages-container {
+  border-radius: 12px;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
 
-/* Chat containers */
+
+/* Light chat containers */
 .light-container {
+  align-self: flex-end;
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+  width: 60%;
 }
 
 /* Darker chat container */
 .darker {
+  align-self: flex-start;
   border-color: #ccc;
   background-color: #ddd;
+  width: 60%;
 }
+
 
 /* Clear floats */
 .light-container::after {
@@ -24,8 +36,7 @@
 /* Style images */
 .light-container img {
   float: left;
-  max-width: 60px;
-  width: 100%;
+
   margin-right: 20px;
   border-radius: 50%;
 }

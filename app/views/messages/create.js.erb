@@ -5,7 +5,7 @@ function addMessage(messageHTML) {
   document.querySelector("#new_message").reset();
 }
 
-
+console.log('test')
 addMessage('<%= j render "message", message: @message, current_user_role: @message.sender == current_user ? :sender : :recipient %>');
 
 

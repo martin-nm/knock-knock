@@ -16,11 +16,14 @@ const input = document.querySelector('#message_text');
 const submit = document.querySelector('#submit-button');
 
 
-input.addEventListener('focus', (event) => {
-  input.addEventListener('keypress', (e) => {
-    if (e.key === "Enter") {
-  console.log("marche");
-      submit.click();
-    }
-  })
-});
+if (document.querySelector(".chatroom")) {
+  input.addEventListener('focus', (event) => {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === "Enter") {
+    console.log("marche");
+        submit.click();
+      }
+    })
+  });
+
+}

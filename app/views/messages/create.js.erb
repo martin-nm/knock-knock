@@ -1,7 +1,8 @@
 
 function addMessage(messageHTML) {
   const messages = document.querySelector('.messages-container');
-  messages.insertAdjacentHTML('afterbegin', messageHTML);
+  messages.insertAdjacentHTML('beforeend', messageHTML);
+  messages.scrollTop = messages.scrollHeight;
   document.querySelector("#new_message").reset();
 }
 

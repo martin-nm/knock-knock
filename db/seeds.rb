@@ -11,6 +11,9 @@ Post.destroy_all
 Message.destroy_all
 User.destroy_all
 puts 'Creating users...'
+
+file = URI.open('https://unsplash.com/photos/u3WmDyKGsrY')
+
 aline = User.new(first_name: "Aline",
   last_name: "Michet",
   email: "aline-michet@gmail.com",
@@ -22,7 +25,6 @@ aline = User.new(first_name: "Aline",
 
 file = URI.open('https://unsplash.com/photos/u3WmDyKGsrY')
 aline.photo.attach(io: file, filename: 'aline-image.jpg', content_type: 'image/jpg')
-
 aline.save!
 
 puts 'Finished Aline'

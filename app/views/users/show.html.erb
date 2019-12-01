@@ -1,11 +1,11 @@
 <div class = "container">
-  <div class= "card-user p-4 mt-3 col-12">
+  <div class= "card-user  p-4 mt-3 col-12">
 
     <div class= "card-all-info  d-flex justify-content-start" >
       <img class ="avatar-large m-4" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
       <div class= card-global-info>
         <h4 class="middle-size"><%= @user.first_name %> <%= @user.last_name %></h4>
-        <h3 class="small-size pb-2">"<%= @user.status %>"</h3>
+        <h3 class="small-size pb-2"><em>"<%= @user.status %>"</em></h3>
         <h2 class ="small-size mb-3"><%= @user.job.upcase %></h2>
         <div class = "btn-start">
         <div class= "mt-4 ">
@@ -20,8 +20,8 @@
 <div class="mt-4 row">
   <div class="col-4">
      <div class= "card-user p-4 ">
-          <p>Website : aline_michet.com </p>
-          <p>Linkedin : aline-michet </p>
+      <p>Website : aline-michet.com </p>
+      <p>Linkedin : aline-michet </p>
     </div>
   </div>
   <div class="col-8">

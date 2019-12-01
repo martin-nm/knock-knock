@@ -24,13 +24,3 @@ input.addEventListener('focus', (event) => {
     }
   })
 });
-
-// function scrollToBottom(){
-//   const messages = document.querySelector('.messages-container');
-//   const chatcontainer = document.querySelector('.chat-container');
-//   messages.scrollTop = chatcontainer.offsetTop - 10;
-// }
-
-// scrollToBottom();
-// setInterval(scrollToBottom, 1000);
-

@@ -73,8 +73,9 @@
 
 .conversations li {
   list-style-type: none;
+  padding-left: 20px;
 }
 
 .conversations li:before {
-  content: "Hello";
+  content: "@";
 }

@@ -1,9 +1,7 @@
 
 //titre principaux
 h1 {
-  font-family: $body-font;
-  font-weight: bold;
-  letter-spacing:1px;
+  font-family: $title;
   color: $dark-gray;
 }
 
@@ -67,9 +65,22 @@ h5 {
 }
 
 .middle-size {
-  font-size:32px;
+  font-size:24px;
 }
 
 .big-size {
   font-size:48px;
+}
+
+#white {
+  color: $white ;
+}
+#purple {
+  color: $purple;
+}
+#corail {
+  color: $corail;
+}
+#mid-purple {
+  color: $middle-purple;
 }

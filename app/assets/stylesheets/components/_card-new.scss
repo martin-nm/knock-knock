@@ -1,16 +1,21 @@
 .card-user {
-  border-radius: 12px;
+  border-radius: 20px;
   background-color: $white;
   padding: 20px;
 }
 
 
 .card-index-user {
-  border-radius: 12px;
+  border-radius: 20px;
   background-color: $white;
   padding: 20px;
 }
 
+.card-index-user:active {
+  border-radius: 20px;
+  background-color: $corail;
+  padding: 20px;
+}
 
 
 
@@ -21,6 +26,8 @@
 
 
 .map-box {
-  height: 600px;
-  width: 400px;
+  height: 470px;
+  width: 570px;
+  border-radius: 20px;
+
 }

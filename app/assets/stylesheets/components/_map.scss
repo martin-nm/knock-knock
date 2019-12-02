@@ -1,7 +1,15 @@
 .mapboxgl-popup {
   max-width: 200px;
+
 }
 
 .mapboxgl-popup-content {
   text-align: center;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+
+}
+
+.map-user-container {
+
 }

@@ -1,10 +1,9 @@
 .navbar-frame {
   width: 25vw;
-  min-width: 180px;
-  height: 100vh;
   position: sticky;
   top:0;
-  background-color: $purple;
+  padding: 20px 0px 20px 20px;
+
 }
 
 .menu-title {
@@ -12,23 +11,66 @@
   height: 55px;
   width: 20vw;
   min-width: 180px;
-  margin: -2px;
+  margin: 4px;
   padding: 12px;
+  align-items: center;
+  text-decoration: none;
+
+  &.active {
+    background-color: $middle-purple-transparent;
+    max-width: 210px;
+    border-radius: 40px;
+  }
 }
 
 .menu-title:hover {
-  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3));
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.1));
+  max-width: 210px;
+  border-radius: 40px;
+  text-decoration: none;
 }
 
 .menu-title:active {
   background-color: $middle-purple;
-  opacity: 0.8;
+  text-decoration: none;
 }
 
 .menu-titles {
-  color: $light-gray;
+  color: $white;
+  align-items: baseline;
+
+  &.ml-4 {
+    margin-bottom: 0px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
-.hey-user {
-  color: $light-purple;
+
+
+
+
+.menu {
+
+  background-color:$testv;
+  height:75vh;
+  width: 20vw;
+  min-width: 180px;
+  border-radius: 0px 0px 20px 20px;
+}
+.profil {
+  background-color:$testf;
+  height:30vh;
+  width: 20vw;
+  padding: 1rem;
+  min-width: 180px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.icone_menu {
+  height:20px;
+  opacity:0.5;
 }

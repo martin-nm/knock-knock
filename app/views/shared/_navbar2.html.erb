@@ -23,10 +23,21 @@
     <div class="menu-title d-flex">
       <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
       <p id="white" class="menu-titles ml-4">Messages</p>
-      <% @chats.each do |chat| %>
-      <%= link_to chat[:name], new_user_message_path(chat[:id]) %>
-      <% end %>
     </div>
+
+    <div class="conversations">
+      <% if params[:controller] == "messages" %>
+
+        <% @chats.each do |chat| %>
+          <li><%= link_to chat[:name], new_user_message_path(chat[:id]) %></li>
+        <% end %>
+      <% end %>
+
+    </div>
+
+
+
+
   </div>
 
 <% else %>

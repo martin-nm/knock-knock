@@ -1,11 +1,10 @@
 class UsersController < ApplicationController
   def index
-
-    # Si params présent
-      # @user filtré avec .near
-    # else
-    @users = User.geocoded
-    # end
+    if params[:range].present?
+      @users = User.near([params[:latitude], params[:longitude]], params[:range])
+    else
+      @users = User.geocoded
+    end
     @markers = @users.map do |user|
       {
         lat: user.latitude,
@@ -14,6 +13,13 @@ class UsersController < ApplicationController
         image_url: helpers.asset_url('pin-map.svg'),
         id: user.id
       }
+    end
+    if params[:onlyUsers]
+      render json: {
+        html: render_to_string(partial: "users/map_and_list")
+      }
+    else
+      render "users/index"
     end
   end
 

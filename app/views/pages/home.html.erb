@@ -1,20 +1,15 @@
 <div class="home_banner">
-  <!-- <div style="background-image: asset-path('homepage-test.png);"> -->
-
-    <div class="container ">
-
-      <div class="row" style="height: 100vh; align-items: center;">
-        <div class="col-6 presentation-home">
-          <h1 class ="big-size">Your localised network of digital nomad workers</h1>
-          <h3 class="middle-size anime-js"><span id="banner-typed-text"></span></h3>
-            <div class= "mt-4 ">
-              <%#= link_to "DISCOVER YOUR NEXT COWORKERS" , users_path, class: 'btn-secondary' %>
-              <%= link_to render("shared/button", text: "DISCOVER"), users_path %>
-            </div>
-        </div>
+  <div class="container ">
+    <div class="row" style="height: 100vh; align-items: center;">
+      <div class="col-6 presentation-home">
+        <h1 class ="big-size">Your localised network of digital nomad workers</h1>
+        <h3 class="middle-size anime-js"><span id="banner-typed-text"></span></h3>
+          <div class= "mt-4 ">
+            <%= link_to render("shared/button", text: "DISCOVER"), users_path %>
+          </div>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 </div>
 
 <div class="container">

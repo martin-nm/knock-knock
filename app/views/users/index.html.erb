@@ -1,46 +1,14 @@
-  <div class="container">
-    <div class= "top-banner m-4 mb-5">
-      <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
-    </div>
-
-
-<h1 id="mid-purple"class="ml-4 mb-4 small-size">All knockies around</h1>
-  <div class="d-flex ml-4">
-
-    <div class=" map-box mr-3"
-      id="map"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-
-    <div class ="flex-grow-1 m-3 ">
-       <div class="cards ">
-        <!-- render partial user_cards -->
-          <% @users.each do |user| %>
-          <div class="card-index-user user-<%= user.id %>" data-user="<%= user.id %>">
-            <%= link_to(user_path(user)) do %>
-              <%#= cl_image_tag user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
-              <div>
-                <h4 class="small-size"><%= user.first_name %></h4>
-                <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+<div class="container">
+  <div class= "top-banner m-4 mb-5">
+    <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
+  </div>
+  <h1 id="mid-purple"class="ml-4 mb-4 small-size">All knockies around</h1>
+  <div id="map_and_list">
+    <%= render "map_and_list" %>
+  </div>
+  <div class="pt-2 m-2">
+    <button class='btn-primari btn-locate localize' id='2kms' data-range="2">2kms around me</button>
+    <button class='btn-primari btn-locate localize' id='5kms' data-range="5">5kms around me</button>
+    <button class='btn-primari btn-locate localize' id='10kms' data-range="10">10kms around me</button>
   </div>
 </div>
-
-<!-- <div class= top-banner>
-</div> -->
-
-
-
-<div class="pt-2 m-2">
-    <button class='btn-primari btn-locate' id='localize'>  LOCATE ME</button> -->
- </div> -->
-
-
-
-<%#= link_to "TEST", users_path(latitude: 48.8656, longitude: 2.3789894, range: 2) %>

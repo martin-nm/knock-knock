@@ -4,7 +4,7 @@
     </div>
 
 
-<h1 id="mid-purple"class="ml-4 mb-4 small-size">All knockies around</h1>
+<h1 id="mid-purple"class="ml-4 mb-4 small-size">Find knockies nearby</h1>
   <div class="d-flex ml-4">
 
     <div class=" map-box mr-3"
@@ -14,10 +14,10 @@
     </div>
 
     <div class ="flex-grow-1 m-3 ">
-       <div class="cards ">
+       <div class="cards">
         <!-- render partial user_cards -->
           <% @users.each do |user| %>
-          <div class="card-index-user user-<%= user.id %>" data-user="<%= user.id %>">
+          <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
             <%= link_to(user_path(user)) do %>
               <%#= cl_image_tag user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
               <div>
@@ -35,11 +35,9 @@
 <!-- <div class= top-banner>
 </div> -->
 
-
-
 <div class="pt-2 m-2">
     <button class='btn-primari btn-locate' id='localize'>  LOCATE ME</button> -->
- </div> -->
+</div> -->
 
 
 

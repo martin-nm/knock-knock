@@ -7,10 +7,11 @@ class UsersController < ApplicationController
     end
     @markers = @users.map do |user|
       {
-       lat: user.latitude,
-       lng: user.longitude,
-       infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
-       image_url: helpers.asset_url('pin-map.svg'),
+        lat: user.latitude,
+        lng: user.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
+        image_url: helpers.asset_url('pin-map.svg'),
+        id: user.id
       }
     end
     if params[:onlyUsers]

@@ -11,22 +11,23 @@
       <% end %>
     </div>
 
-    <div class="menu flex-grow-1 p-4">
-      <%= link_to users_path, class: "menu-title mt-5 d-flex #{'active' if request.path == '/users'}" do %>
-        <div><%= image_tag "discover.svg", class: "icone_menu" %></div>
-        <p id="white" class="menu-titles ml-4">Discover</p>
-      <% end %>
-        <div class="menu-title d-flex">
-          <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
-          <p id="white" class="menu-titles ml-4">Messages</p>
-        </div>
-      <%= link_to posts_path, class: "menu-title d-flex #{'active' if request.path == '/posts'}" do %>
-        <div><%= image_tag "feed.svg", class: "icone_menu" %></div>
-        <p id="white" class="menu-titles ml-4">Feed</p>
+  <div class="menu flex-grow-1 p-4">
+    <%= link_to users_path, class: "menu-title mt-5 d-flex #{'active' if request.path == '/users'}" do %>
+      <div><%= image_tag "discover.svg", class: "icone_menu" %></div>
+      <p id="white" class="menu-titles ml-4">Discover</p>
+    <% end %>
+    <%= link_to posts_path, class: "menu-title d-flex #{'active' if request.path == '/posts'}" do %>
+      <div><%= image_tag "feed.svg", class: "icone_menu" %></div>
+      <p id="white" class="menu-titles ml-4">Feed</p>
+    <% end %>
+    <div class="menu-title d-flex">
+      <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
+      <p id="white" class="menu-titles ml-4">Messages</p>
+      <% @chats.each do |chat| %>
+      <%= link_to chat[:name], new_user_message_path(chat[:id]) %>
       <% end %>
     </div>
   </div>
-
 
 <% else %>
   <div class="navbar-frame p-4 ">

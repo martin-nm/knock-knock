@@ -1,12 +1,17 @@
-.cards {
+.cards, .cards-p {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: auto;
-  grid-gap: 16px;
 
-  a{
-    text-decoration:none;
-  }
+}
+
+.cards {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
+.cards-p {
+  grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
 }
 
 // Smallest device
@@ -50,120 +55,9 @@
   .cards {
     grid-template-columns: 1fr ;
   }
-   .cards-post {
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+   .cards-p {
+    grid-template-columns: 1fr 1fr ;
   }
 }
 
-.card-post {
-  overflow: hidden;
-  background: $white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.card-post h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  text-decoration: none;
-}
-
-.card-post-info {
-  margin-left: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: $purple;
-  border-bottom-width: 0.5px;
-}
-
-.user-created {
-  padding-left: 3%;
-  padding-right: 3%;
-  width: 100%;
-}
-
-.created {
-  text-align: right;
-  color: $dark-gray;
-  font-size: 12px;
-  font-style: italic;
-  vertical-align: top;
-}
-
-.user {
-  font-size: 16px;
-  color: $dark-gray;
-}
-
-.card-post-title {
-  color: $middle-gray;
-}
-
-.card-post-content {
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  color: $middle-gray;
-}
-
-.content {
-  font-size: 14px;
-}
-
-.card-post:hover {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.flexbox {
-  display: flex;
-}
-
-.cat-remove {
-justify-content: space-between;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-background-color: $purple;
-color: $white;
-height: 20px;
-}
-
-.category {
-  text-align: center;
-}
-
-.remove {
-  text-align: right;
-}
-
-.btn-delete {
-  background:$white;
-  padding: 1px 22px;
-  border-radius: 8px;
-  color: $purple !important;
-  border: 1px solid $purple !important;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bolder;
-  border-radius: 0px 0px 8px 8px;
-  display: block;
-  width: 100%;
-}
-
-.btn-delete:hover {
-  background: $purple;
-  transition: background 0.3s ease;
-  color: $white !important;
-  opacity: 0.9;
-  text-decoration: none;
-}
-
-.card-center {
-  flex-grow: 1;
-}

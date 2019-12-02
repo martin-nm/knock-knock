@@ -5,7 +5,7 @@
 
         <% if current_user.photo.attached? %>
 
-         <div><%= cl_image_tag current_user.photo.key, class: "small-avatar"%></div>
+         <div class="text-center"><%= cl_image_tag current_user.photo.key, class: "small-avatar"%></div>
           <% end %>
         <h2 class="small-size text-center pt-3 m-0 " id="white"><%=current_user.first_name.upcase %> <%=current_user.last_name.upcase %> </h2>
         <p class="text-center " id="white"><%=current_user.email%></p>

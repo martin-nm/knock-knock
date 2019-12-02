@@ -16,16 +16,20 @@ const input = document.querySelector('#message_text');
 const submit = document.querySelector('#submit-button');
 
 
-input.addEventListener('focus', (event) => {
-  input.addEventListener('keypress', (e) => {
-    if (e.key === "Enter") {
-  console.log("marche");
-      submit.click();
-    }
-  })
+if (document.querySelector('focus')) {
+    input.addEventListener('focus', (event) => {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === "Enter") {
+        submit.click();
+      }
+    })
+  });
+};
 
-const marker = document.querySelector('.mapboxgl-marker-anchor-center');
-marker.addEventListener('click', (event) => {
-  const userCard = document.querySelector('.user-11');
-  console.log(userCard.style.backgroundColor="#FF7F5D");
-});
+
+
+// const marker = document.querySelector('.mapboxgl-marker-anchor-center');
+// marker.addEventListener('click', (event) => {
+//   const userCard = document.querySelector('.user-11');
+//   console.log(userCard.style.backgroundColor="");
+// });

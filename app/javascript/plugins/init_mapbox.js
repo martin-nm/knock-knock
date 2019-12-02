@@ -47,24 +47,24 @@ const initMapbox = () => {
         .addTo(map);
 
       fitMapToMarkers(map, [{lng: longitude, lat: latitude}], zoom)
-    });
-    }
+      });
+    };
 
-    document.querySelector('#localize').addEventListener('click', (event) => {
-      geolocMe(13);
+    // document.querySelector('#localize').addEventListener('click', (event) => {
+      // geolocMe(13);
       // Call ajax vers l'index avec comme params latitude, longitude, range
 
       // Dans l'action index du controller
       // Si j'ai des params latitude et longitude, alors filtrer les users dans l'index avec la méthode .near
 
       // Dans la vue js.erb, render les cards filtrées
-    });
+    // });
 
     // Au click sur le bouton 5km
     // J'appelle geolocMe(13)
     //
-  }
-};
+  // }
+// };
 
 
 export { initMapbox };

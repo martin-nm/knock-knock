@@ -26,10 +26,3 @@ if (document.querySelector(".chatroom")) {
     })
   })
 };
-
-
-const marker = document.querySelector('.mapboxgl-marker-anchor-center');
-marker.addEventListener('click', (event) => {
-  const userCard = document.querySelector('.user-11');
-  console.log(userCard.style.backgroundColor="#FF7F5D");
-});

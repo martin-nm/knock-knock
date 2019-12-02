@@ -15,7 +15,7 @@
 </ul>
 
 
-<div class="m-5 text-right"> <%= link_to "New Post", new_post_path, class: "btn-secondary" %></div>
+<div class="m-5 text-right "> <%= link_to "New Post", new_post_path, class: "btn-secondary " %></div>
 <div class="tab-content" id="myTabContent">
 
   <div class="tab-pane fade show active posts-container" id="all" role="tabpanel" aria-labelledby="all-tab">
@@ -23,9 +23,8 @@
       <% @posts.each do |post| %>
       <div class="card-post" id="post-<%= post.id %>">
 
-        <div class="flexbox cat-remove mb-0">
-          <div><h6></h6></div>
-          <div class="category"><h6><%= post.category %></h6></div>
+        <div class="flexbox cat-remove mb-3">
+          <div class="category "><h2 class="xsmall-size m-0 padding-category"id="white" ><%= post.category %></h2></div>
           <div class="remove">
           <%= link_to "💣", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
           </div>
@@ -50,12 +49,12 @@
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>
           </div>
-
+          <div class="m-5 text-right "> <%= link_to "answer to", class: "btn-secondary " %></div>
       </div>
 
       <div class="div-delete">
         <% if post.user == current_user %>
-          <%= link_to "delete post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-delete" %>
+          <%= link_to "delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-tertiary" %>
         <% else %>
         <% end %>
       </div>
@@ -124,7 +123,7 @@
         <div class="card-center">
           <div class="flexbox card-post-info p-1">
             <div>
-              <%= image_tag "Pripri.png", :class => "avatar-small" %>
+              <%= image_tag "Pripri.png", :class => "small-avatar" %>
             </div>
             <div class="user-created">
               <h5 class="user mb-0"><%= post.user.first_name %></h5>
@@ -141,7 +140,7 @@
 
       <div class="div-delete">
         <% if post.user == current_user %>
-          <%= link_to "delete post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-delete" %>
+          <%= link_to "delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-tertiary" %>
         <% else %>
         <% end %>
       </div>
@@ -185,7 +184,7 @@
 
       <div class="div-delete">
         <% if post.user == current_user %>
-          <%= link_to "delete post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-delete" %>
+          <%= link_to "delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-tertiary" %>
         <% else %>
         <% end %>
       </div>

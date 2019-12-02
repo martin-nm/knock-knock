@@ -3,6 +3,19 @@
   background: $white;
   height: 47px;
   opacity: 0.8;
-  border-radius: 12px;
+  border-radius: 20px;
 
+}
+
+.welcome {
+  background: $corail;
+  border-radius:20px;
+  height: 80px;
+  position: relative;
+}
+
+.image-welcome {
+    position: absolute;
+    right: 85px;
+    top: -127px;
 }

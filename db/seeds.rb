@@ -23,7 +23,7 @@ aline = User.new(first_name: "Aline",
   status:"Workin' at @numa café",
   location: "1 rue de la Roquette, Paris, france")
 
-file = URI.open('https://unsplash.com/photos/u3WmDyKGsrY')
+file = URI.open('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
 aline.photo.attach(io: file, filename: 'aline-image.jpg', content_type: 'image/jpg')
 aline.save!
 
@@ -37,7 +37,7 @@ louis = User.new(first_name: "Louis",
   status:"Hey Knockies, I'm looking for missions in the Travel & Tourism sector",
   location: "1 avenue du Colonel Henri Rol-Tanguy, 75014 Paris")
 
-file = URI.open('https://unsplash.com/photos/vMV6r4VRhJ8')
+file = URI.open('https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1115&q=80')
 louis.photo.attach(io: file, filename: 'louis-image.jpg', content_type: 'image/jpg')
 
 louis.save!
@@ -53,7 +53,7 @@ bio: "Young co-founder of a company specialized in Web Scrapping",
 status:"Looking for a talented CTO",
 location: "44 Rue François 1er, 75008, Paris")
 
-file = URI.open('https://unsplash.com/photos/c_GmwfHBDzk')
+file = URI.open('https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 sam.photo.attach(io: file, filename: 'sam-image.jpg', content_type: 'image/jpg')
 
 sam.save!
@@ -74,7 +74,7 @@ others: Data science, Machine learning",
   status:"Hey Knockies, I'm currently in Paris for 3 weeks",
   location: "2 avenue Trudaine, 75009 Paris")
 
-file = URI.open('https://unsplash.com/photos/Dh56R9HKg_g')
+file = URI.open('https://images.unsplash.com/photo-1548536515-67545ff2ecc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 eliza.photo.attach(io: file, filename: 'eliza-image.jpg', content_type: 'image/jpg')
 
 eliza.save!
@@ -89,7 +89,7 @@ remy = User.new(first_name: "Remy",
   status:"Hey Knockies, I'm new in Paris, looking for good spots",
   location: "2 avenue Trudaine, 75009 Paris")
 
-file = URI.open('https://unsplash.com/photos/NohB3FJSY90')
+file = URI.open('https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80')
 remy.photo.attach(io: file, filename: 'remy-image.jpg', content_type: 'image/jpg')
 
 remy.save!
@@ -104,7 +104,7 @@ paul = User.new(first_name: "Paul",
   status:"Hey Knockies, je me forme à React JS, qui connait ???",
   location: "2 rue Oberkampf, 75011 Paris")
 
-file = URI.open('https://unsplash.com/photos/m4wO9v7OGr8')
+file = URI.open('https://images.unsplash.com/photo-1546672657-366775449156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
 paul.photo.attach(io: file, filename: 'paul-image.jpg', content_type: 'image/jpg')
 
 paul.save!

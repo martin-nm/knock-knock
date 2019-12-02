@@ -28,6 +28,10 @@
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+
+   .cards-post {
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -35,12 +39,19 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+   .cards-post {
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
     grid-template-columns: 1fr ;
+  }
+   .cards-post {
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
   }
 }
 

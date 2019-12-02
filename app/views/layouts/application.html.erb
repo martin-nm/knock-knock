@@ -21,7 +21,7 @@
           <%= render 'shared/navbar2' %>
         <% end %>
 
-        <div class="<%= "page-contenu" unless current_page?(root_path) %>">
+        <div class="<%= "page-contenu" unless current_page?(root_path) %> page_banner">
           <%= yield %>
         </div>
       </div>

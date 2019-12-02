@@ -18,86 +18,50 @@ const initMapbox = () => {
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
-      markers.forEach((marker) => {
-        const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
-        const element = document.createElement('div');
-          element.className = 'marker';
-          element.style.backgroundImage = `url('${marker.image_url}')`;
-          element.style.backgroundSize = 'contain';
-          element.style.width = '30px';
-          element.style.height = '30px';
-        new mapboxgl.Marker(element)
-          .setLngLat([ marker.lng, marker.lat ])
-          .setPopup(popup)
-          .addTo(map);
-      });
+    markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+      const element = document.createElement('div');
+        element.className = 'marker';
+        element.style.backgroundImage = `url('${marker.image_url}')`;
+        element.style.backgroundSize = 'contain';
+        element.style.width = '30px';
+        element.style.height = '30px';
+      new mapboxgl.Marker(element)
+        .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
+        .addTo(map);
+    });
 
-    fitMapToMarkers(map, markers, 14);
-
+    fitMapToMarkers(map, markers, 13);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                           mapboxgl: mapboxgl }));
 
-    const geolocMe = (zoom) => {
-      navigator.geolocation.getCurrentPosition(e => {
-      const latitude = e.coords.latitude;
-      const longitude = e.coords.longitude;
-      console.log(latitude, longitude)
-      new mapboxgl.Marker()
-        .setLngLat([ longitude, latitude ])
-        .addTo(map);
-
-      fitMapToMarkers(map, [{lng: longitude, lat: latitude}], zoom)
-      });
-    };
-
-
-    // const marker = document.querySelector('.mapboxgl-marker-anchor-center');
-    // marker.addEventListener('click', (event) => {
-    //   const userCard = document.querySelector(`.user-${userId}`);
-    //   console.log(userCard.style.backgroundColor="orange");
-    // });
-
-    // document.querySelector('#localize').addEventListener('click', (event) => {
-      // geolocMe(13);
-      // Call ajax vers l'index avec comme params latitude, longitude, range
-
-      // Dans l'action index du controller
-      // Si j'ai des params latitude et longitude, alors filtrer les users dans l'index avec la méthode .near
-
-      // Dans la vue js.erb, render les cards filtrées
-    // });
-
-    // Au click sur le bouton 5km
-    // J'appelle geolocMe(13)
-    //
-  }
+    return map;
+  };
 };
 
+const initButtons = () => {
+  document.querySelectorAll('.localize').forEach((element) => {
+    const range = element.getAttribute("data-range");
+    element.addEventListener('click', (event) => {
+      navigator.geolocation.getCurrentPosition(e => {
+        const latitude = e.coords.latitude;
+        const longitude = e.coords.longitude;
+        fetch(`/users?onlyUsers=1&latitude=${latitude}&longitude=${longitude}&range=${range}`).
+          then(response => response.json()).
+          then(data => {
+            document.getElementById("map_and_list").innerHTML = data.html;
+            const builtMap = initMapbox();
+            new mapboxgl.Marker()
+              .setLngLat([ longitude, latitude ])
+              .addTo(builtMap);
+            const bounds = new mapboxgl.LngLatBounds();
+            bounds.extend([ longitude, latitude ])
+            builtMap.fitBounds(bounds, {maxZoom: 12});
+          });
+      });
+    });
+  });
+};
 
-export { initMapbox };
-
-// faire un bouton pour ecouter l event, geoloc a ce moment la, recup la long et lat
-// puis les donner à un marker appelé my marker et fiter la mpa sur ce marker
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export { initMapbox, initButtons };

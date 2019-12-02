@@ -4,32 +4,27 @@
   padding: 0rem 1rem;
   margin-top: -16px;
   background-color: transparent;
+}
 
 .navbar-collapse {
   flex-grow: 0;
   margin-right: 45px;
+}
+.nav-link {
 
-  .nav-link {
-
-    &:hover {
-      font-weight: bolder;
-      color: $purple;
-    }
-  }
-
-    .nav-link.active {
-      color: $purple;
-      opacity: 1;
-    }
-  }
-//LOGO
-  .navbar-brand img {
-    width: 227px;
-    margin-left: 31px;
+  &:hover {
+    font-weight: bolder;
+    color: $purple;
   }
 }
 
+.nav-link.active {
+  color: $purple;
+  opacity: 1;
+}
 
-
-
-
+//LOGO
+.navbar-brand img {
+  width: 227px;
+  margin-left: 31px;
+}

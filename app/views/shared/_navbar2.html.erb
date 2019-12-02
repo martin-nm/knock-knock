@@ -1,19 +1,16 @@
 <% if user_signed_in? %>
   <div class="navbar-frame ">
     <div class="profil">
-       <div class="m-4 text-center " ><%= image_tag "logo-blanc.svg", width:170%></div>
-
-        <% if current_user.photo.attached? %>
-
-         <div class="text-center"><%= cl_image_tag current_user.photo.key, class: "small-avatar"%></div>
-          <% end %>
-        <h2 class="small-size text-center pt-3 m-0 " id="white"><%=current_user.first_name.upcase %> <%=current_user.last_name.upcase %> </h2>
-        <p class="text-center " id="white"><%=current_user.email%></p>
+      <div class="m-4 text-center " ><%= image_tag "logo-blanc.svg", width:170%></div>
+      <% if current_user.photo.attached? %>
+        <div>
+          <%= cl_image_tag current_user.photo.key, class: "small-avatar"%>
+          <h2 class="small-size text-center pt-3 m-0 " id="white"><%=current_user.first_name.upcase %> <%=current_user.last_name.upcase %> </h2>
+          <p class="text-center " id="white"><%=current_user.email%></p>
+        </div>
+      <% end %>
     </div>
 
-    <!-- <button class='btn-flat' id='2'>2kms</button> -->
-    <!-- <button class='btn-flat' id='5'>5kms</button> -->
-    <!-- <button class='btn-flat' id='10'>10kms</button> -->
   <div class="menu flex-grow-1 p-4">
     <%= link_to users_path, class: "menu-title mt-5 d-flex #{'active' if request.path == '/users'}" do %>
       <div><%= image_tag "discover.svg", class: "icone_menu" %></div>
@@ -31,13 +28,11 @@
       <% end %>
     </div>
   </div>
-</div>
 
 <% else %>
   <div class="navbar-frame p-4 ">
-    <h1>Knock Knock</h1>
-    <%= link_to 'Home', root_path %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "knock-logo.png" %>
+    <% end %>
   </div>
 <% end %>
-
-

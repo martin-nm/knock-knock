@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs tabs-underlined format-onglets" id="myTab" role="tablist">
+<ul class="nav nav-tabs tabs-underlined format-onglets ml-5" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="tab-underlined nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
   </li>
@@ -11,16 +11,15 @@
   <li class="nav-item">
     <a class="tab-underlined nav-link" id="expertise-tab" data-toggle="tab" href="#expertise" role="tab" aria-controls="expertise" aria-selected="false">Expertise</a>
   </li>
-  <li class="nav-item">
-    <a id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="false"><%= link_to "New Post", new_post_path, class: "tab-underlined nav-link" %></a>
-  </li>
+
 </ul>
 
 
+<div class="m-5 text-right"> <%= link_to "New Post", new_post_path, class: "btn-secondary" %></div>
 <div class="tab-content" id="myTabContent">
 
-  <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-    <div class="cards">
+  <div class="tab-pane fade show active posts-container" id="all" role="tabpanel" aria-labelledby="all-tab">
+    <div class="cards-p">
       <% @posts.each do |post| %>
       <div class="card-post" id="post-<%= post.id %>">
 
@@ -30,24 +29,28 @@
           <div class="remove">
           <%= link_to "💣", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
           </div>
-        </div>
+      </div>
 
         <div class="card-center">
-          <div class="flexbox card-post-info p-1">
-            <div>
+
+          <div class=" card-post-info d-flex mb-2 ">
+            <div class ="p-2 ">
               <%= image_tag "Pripri.png", class: "small-avatar" %>
             </div>
-            <div class="user-created">
-              <h5 class="user mb-0"><%= post.user.first_name %></h5>
-              <h5 class="created"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
+            <div class ="ml-3 mt-3">
+              <h4 class="user"><%= post.user.first_name %></h4>
+              <h2 class="xsmall-size" ><%= post.user.job.upcase %></h2>
             </div>
           </div>
-          <div>
-            <h2 class="card-post-title pl-1"><%= post.title %></h2>
+
+          <div class="d-flex justify-content-between ">
+              <h1 class="small-size p-2"><%= post.title %></h1>
+          <h5 class="created p-2 "  id="blue"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
           </div>
-          <div class="card-post-content">
-            <p class="content"><%= post.content %></p>
+          <div class="card-post-content " >
+            <p class="small-size" id="blue"><%= post.content %></p>
           </div>
+
       </div>
 
       <div class="div-delete">
@@ -147,6 +150,7 @@
      <% end %>
     </div>
   </div>
+
 
   <div class="tab-pane fade" id="expertise" role="tabpanel" aria-labelledby="expertise-tab">
     <div class="cards">

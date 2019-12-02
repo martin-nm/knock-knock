@@ -1,55 +1,52 @@
 .chatroom {
   padding: 50px;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   overflow-y: auto;
+  top: 0;
 }
 
 .form-chat {
   // margin-top:-30px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 94%;
   padding-bottom: 20px;
 }
 
 .chat-header {
-  position: fixed;
   top: 0;
-  padding: 25px;
+  padding: 10px;
   overflow: hidden;
 }
 
 .messages-container {
-  margin-top: 50px;
-  // margin-bottom: -50px;
   border-radius: 12px;
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
-  height: 85%;
+  height: 60vh;
   overflow: auto;
   overflow-x: hidden;
-  // padding: 60px 0;
 }
-
 
 /* Light chat containers */
 .light-container {
+  background-color: $white;
+  border-radius: 30px 30px 0px 30px;
   align-self: flex-end;
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 0;
   width: 60%;
 }
 
 /* Darker chat container */
 .darker {
+  border-radius: 30px 30px 30px 0px;
   align-self: flex-start;
   border-color: #ccc;
-  background-color: $light-purple;
+  background-color: $light-corail;
   width: 60%;
 }
 
@@ -74,4 +71,27 @@
   float: right;
   margin-left: 20px;
   margin-right:0;
+}
+
+.btn-submit {
+  float: right;
+  border-radius: 50px;
+
+  padding: 7px 20px;
+  text-decoration:none;
+  background:$white;
+  color: $corail !important;
+  border: 1px solid $corail !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  }
+
+.btn-submit:hover {
+  background: $corail;
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
 }

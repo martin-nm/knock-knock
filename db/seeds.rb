@@ -19,30 +19,97 @@ aline = User.new(first_name: "Aline",
   email: "aline-michet@gmail.com",
   password:"123456",
   job: "Graphic Designer",
-  bio: "Just begging my freelance life, tips for work organisation are welcomming",
+  bio: "Just beginning my freelance life, tips for work organisation are welcomed!",
   status:"Workin' at @numa café",
-  location: "1 rue de la roquette, paris, france")
-aline.photo.attach(io: file, filename: 'aline', content_type: 'image/jpeg')
+  location: "1 rue de la Roquette, Paris, france")
+
+file = URI.open('https://unsplash.com/photos/u3WmDyKGsrY')
+aline.photo.attach(io: file, filename: 'aline-image.jpg', content_type: 'image/jpg')
 aline.save!
+
+puts 'Finished Aline'
 
 louis = User.new(first_name: "Louis",
   last_name: "Seguin",
   email: "louis-seguin@gmail.com",
   password:"123456", job: "Developper",
-  bio: "I'm Reactjs Java Firebase developper based in Paris, working remotely",
-  status:"Hey knockies, I'm Searching for missions in the Travel & Tourism sectors",
-  location: "1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris")
+  bio: "I'm Reactjs Java Firebase Developper based in Paris, working remotely",
+  status:"Hey Knockies, I'm looking for missions in the Travel & Tourism sector",
+  location: "1 avenue du Colonel Henri Rol-Tanguy, 75014 Paris")
+
+file = URI.open('https://unsplash.com/photos/vMV6r4VRhJ8')
+louis.photo.attach(io: file, filename: 'louis-image.jpg', content_type: 'image/jpg')
+
 louis.save!
+
+puts 'Finished Louis'
 
 sam = User.new(first_name: "Sam",
 last_name: "Lee",
 email: "sam-lee@gmail.com",
 password:"123456",
 job: "Data Analyst",
-bio: "Young co-founder of a company specialized in the Web Scrapping",
-status:"",
-location: "44 Rue François 1er, 75008 Paris")
+bio: "Young co-founder of a company specialized in Web Scrapping",
+status:"Looking for a talented CTO",
+location: "44 Rue François 1er, 75008, Paris")
+
+file = URI.open('https://unsplash.com/photos/c_GmwfHBDzk')
+sam.photo.attach(io: file, filename: 'sam-image.jpg', content_type: 'image/jpg')
+
 sam.save!
+
+puts 'Finished Sam'
+
+eliza = User.new(first_name: "Eliza",
+  last_name: "Thorez",
+  email: "eliza-thorez@gmail.com",
+  password:"123456", job: "DevOps Engineer",
+  bio: "My key skills are:
+Languages: Python, JavaScript(VUE.JS), C, and C++
+Framework: Django, Flask
+DB: SQL, SQLite, PostgreSQL.
+Cloud: AWS
+Devops: Kubernetes, Docker, CI/CD
+others: Data science, Machine learning",
+  status:"Hey Knockies, I'm currently in Paris for 3 weeks",
+  location: "2 avenue Trudaine, 75009 Paris")
+
+file = URI.open('https://unsplash.com/photos/Dh56R9HKg_g')
+eliza.photo.attach(io: file, filename: 'eliza-image.jpg', content_type: 'image/jpg')
+
+eliza.save!
+
+puts 'Finished Eliza'
+
+remy = User.new(first_name: "Remy",
+  last_name: "Tallot",
+  email: "remy-tallot@gmail.com",
+  password:"123456", job: "Developpeur Python",
+  bio: "Computer Science Engineer - Python & JavaScript. I am a professional driven by passion. Naturally curious, thorough and resourceful, I consistently execute and deliver high quality products that meet user needs.",
+  status:"Hey Knockies, I'm new in Paris, looking for good spots",
+  location: "2 avenue Trudaine, 75009 Paris")
+
+file = URI.open('https://unsplash.com/photos/NohB3FJSY90')
+remy.photo.attach(io: file, filename: 'remy-image.jpg', content_type: 'image/jpg')
+
+remy.save!
+
+puts 'Finished Remy'
+
+paul = User.new(first_name: "Paul",
+  last_name: "Ungar",
+  email: "paul-ungar@gmail.com",
+  password:"123456", job: "Developpeur web fullstack - ReactJs/NodeJs",
+  bio: " Après 8 ans dans le milieu médical me permettant notamment de développer mes compétences d'organisation, j'ai choisi de me reconvertir  dans le développement web. J'ai suivi la formation du Wagon, école innovante dont la pédagogie est orientée vers le développement de l'autonomie, l'entraide et la réalisation de projets concrets.",
+  status:"Hey Knockies, je me forme à React JS, qui connait ???",
+  location: "2 rue Oberkampf, 75011 Paris")
+
+file = URI.open('https://unsplash.com/photos/m4wO9v7OGr8')
+paul.photo.attach(io: file, filename: 'paul-image.jpg', content_type: 'image/jpg')
+
+paul.save!
+
+puts 'Finished Paul'
 
 puts 'Creating posts...'
 
@@ -52,17 +119,32 @@ expires_at: "18h".to_datetime)
 post_aline.user = aline
 post_aline.save!
 
+puts 'Finished Post-1 Aline'
+
 post_sam = Post.new( title: "Come one",
   content: "Hello there. I heard about a talk around the topic of 'IA for good' at @Le Wagon that promises to be really interesting, if some of us want to join me and maybe going have a drink after, feel free!", category:"community",
   expires_at: "13h".to_datetime)
 post_sam.user = sam
 post_sam.save!
 
-post_louis= Post.new( title: "DA experts ? ",
+puts 'Finished Post Sam'
+
+post_louis = Post.new( title: "DA experts?",
   content: "Salut les artistes ! There is some graphic designer nearby ? Need 2 or 3 advices about front-end aestetic issues ?",
    category:"expertise",
   expires_at: "17h".to_datetime)
 post_louis.user = louis
 post_louis.save!
+
+puts 'Finished Post Louis'
+
+post_eliza = Post.new( title: "Quelqu'un connait codeur.com ?",
+  content: "https://www.codeur.com/users/c/developpement",
+   category:"expertise",
+  expires_at: "12h".to_datetime)
+post_eliza.user = eliza
+post_eliza.save!
+
+puts 'Finished Post Eliza'
 
 puts 'Finished!'

@@ -1,13 +1,6 @@
 <div class="chatroom">
-  <h3 class="middle-size"> Send your message </h3>
-
-  <div class="row">
-    <div class= "col-md-6 col-md-offset-3">
-      <%= simple_form_for([@user, @message], remote: true) do |f| %>
-        <%= f.input :text, placeholder: "Type your message", label: false %>
-        <%= f.submit "SEND", class: "btn-secondary", id: "submit-button" %>
-      <% end %>
-    </div>
+  <div class="chat-header">
+    <h3 class="middle-size"> Knock-Knock Chat with <%= @user.first_name %></h3>
   </div>
 
   <div class="messages-container">
@@ -15,6 +8,18 @@
       <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
     <% end %>
   </div>
+
+  <div class="form-chat">
+    <div class="row">
+      <div class= "col-md-6 col-md-offset-3">
+        <%= simple_form_for([@user, @message], remote: true) do |f| %>
+          <%= f.input :text, placeholder: "Type your message", label: false %>
+          <%= f.submit "SEND", class: "btn-secondary", id: "submit-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 

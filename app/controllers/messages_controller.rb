@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @user = User.find(params[:user_id])
     user_id = params[:user_id]
     @messages = Message.where('(sender_id  = ? AND recipient_id = ?) OR (sender_id  = ? AND recipient_id = ?)', current_user.id, user_id, user_id, current_user.id)
-    @messages = @messages.order("created_at DESC").all
+    @messages = @messages.order("created_at ASC").all
   end
 
   def create

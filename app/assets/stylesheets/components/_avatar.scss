@@ -14,10 +14,11 @@
 }
 
 .small-avatar {
-  width: 50px;
+  width: 60px;
   border-radius: 50%;
-  height:50px;
+  height:60px;
   object-fit: cover;
+  border: solid 3px $middle-purple;
 }
 
 .rond {

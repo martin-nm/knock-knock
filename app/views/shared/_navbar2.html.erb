@@ -1,14 +1,14 @@
 <% if user_signed_in? %>
-  <div class="navbar-frame p-4 ">
+  <div class="navbar-frame ">
     <div class="profil">
-       <div class="m-3 text-center" ><%= image_tag "logo-blanc.svg", width:170%></div>
+       <div class="m-4 text-center " ><%= image_tag "logo-blanc.svg", width:170%></div>
 
         <% if current_user.photo.attached? %>
-        <div class="d-flex mt-4 align-item-center">
-          <div><%= cl_image_tag current_user.photo.key, class: "small-avatar"%></div>
+
+         <div><%= cl_image_tag current_user.photo.key, class: "small-avatar"%></div>
           <% end %>
-          <h2 class="small-size text-center p-3 mt-3 " id="white"><%=current_user.first_name %> </h2>
-        </div>
+        <h2 class="small-size text-center pt-3 m-0 " id="white"><%=current_user.first_name.upcase %> <%=current_user.last_name.upcase %> </h2>
+        <p class="text-center " id="white"><%=current_user.email%></p>
     </div>
 
     <!-- <button class='btn-flat' id='2'>2kms</button> -->

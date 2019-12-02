@@ -50,6 +50,13 @@ const initMapbox = () => {
       });
     };
 
+
+    // const marker = document.querySelector('.mapboxgl-marker-anchor-center');
+    // marker.addEventListener('click', (event) => {
+    //   const userCard = document.querySelector(`.user-${userId}`);
+    //   console.log(userCard.style.backgroundColor="orange");
+    // });
+
     // document.querySelector('#localize').addEventListener('click', (event) => {
       // geolocMe(13);
       // Call ajax vers l'index avec comme params latitude, longitude, range
@@ -63,8 +70,8 @@ const initMapbox = () => {
     // Au click sur le bouton 5km
     // J'appelle geolocMe(13)
     //
-  // }
-// };
+  }
+};
 
 
 export { initMapbox };

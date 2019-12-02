@@ -3,7 +3,7 @@
   position: sticky;
   top:0;
   padding: 20px 0px 20px 20px;
-
+  height: 100vh;
 }
 
 .menu-title {
@@ -49,10 +49,6 @@
   }
 }
 
-
-
-
-
 .menu {
 
   background-color:$testv;
@@ -73,4 +69,12 @@
 .icone_menu {
   height:20px;
   opacity:0.5;
+}
+
+.conversations li {
+  list-style-type: none;
+}
+
+.conversations li:before {
+  content: "Hello";
 }

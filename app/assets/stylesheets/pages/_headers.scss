@@ -23,6 +23,7 @@ h3 {
   color: $middle-purple;
   font-family: $body-font;
   font-weight: bolder;
+
 }
 
 
@@ -73,11 +74,18 @@ h5 {
 }
 
 #white {
-  color: $white ;
+  color: $white;
+  opacity: 1;
 }
+
 #purple {
   color: $purple;
 }
+
+#blue {
+  color: $dark-gray;
+}
+
 #corail {
   color: $corail;
 }

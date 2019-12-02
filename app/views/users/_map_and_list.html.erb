@@ -1,0 +1,24 @@
+<div class="d-flex ml-4">
+  <div class="map-box mr-3"
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <div class ="flex-grow-1 m-3 ">
+    <div class="cards ">
+      <!-- render partial user_cards -->
+      <% @users.each do |user| %>
+        <div class="card-index-user user-<%= user.id %>" data-user="<%= user.id %>">
+          <%= link_to(user_path(user)) do %>
+            <%#= cl_image_tag user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
+            <div>
+              <h4 class="small-size"><%= user.first_name %></h4>
+              <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

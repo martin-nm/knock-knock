@@ -22,3 +22,123 @@
   border-bottom: 0;
   margin-top: 20px;
 }
+
+.card-post {
+  background:$corail-transparent;
+  border-radius: 20px;
+  height: auto;
+  padding: 30px;
+}
+
+.card-post h2 {
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-post-info {
+  margin-left: 2px;
+  border-bottom: 2px solid $middle-purple-transparent;
+
+
+}
+
+.user-created {
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 100%;
+}
+
+.created {
+  color: $middle-purple-transparent;
+  font-size: 12px;
+
+
+}
+
+.user {
+  font-size: 16px;
+  color: $dark-gray;
+}
+
+.card-post-title {
+  color: $middle-gray;
+}
+
+.card-post-content {
+
+
+  line-height:26px;
+
+}
+
+.content {
+  font-size: 14px;
+}
+
+.card-post:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.flexbox {
+  display: flex;
+}
+
+.content {
+  line-height:70px;
+}
+.cat-remove {
+justify-content: space-between;
+
+background-color: $purple;
+color: $white;
+height: 20px;
+border-radius:20px;
+}
+
+.category {
+  border-radius:20px;
+  background-color: $corail;
+  color: $white;
+  width:100px;
+  height:30px;
+  text-align: center;
+  }
+
+.remove {
+  text-align: right;
+}
+
+.btn-delete {
+  background:$white;
+  padding: 1px 22px;
+  border-radius: 8px;
+  color: $purple !important;
+  border: 1px solid $purple !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  border-radius: 0px 0px 8px 8px;
+  display: block;
+  width: 100%;
+}
+
+.btn-delete:hover {
+  background: $purple;
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.card-center {
+  flex-grow: 1;
+}
+
+.padding-category {
+  padding-top: 5px;
+}
+
+.posts-container {
+  margin: 10px 40px;
+}

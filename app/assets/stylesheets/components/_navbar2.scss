@@ -71,11 +71,26 @@
   opacity:0.5;
 }
 
+
 .conversations li {
   list-style-type: none;
   padding-left: 20px;
+  padding-bottom: 20px;
+  color: white;
+  align-items: baseline;
+  text-decoration: none;
 }
 
-.conversations li:before {
-  content: "@";
+.conversations a {
+  color: white;
 }
+
+.conversations a:before {
+  content: "@ ";
+}
+
+.conversations a:hover {
+  text-decoration: none;
+}
+
+

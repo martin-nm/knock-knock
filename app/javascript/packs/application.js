@@ -1,12 +1,16 @@
 import "bootstrap";
+import "animate.css/animate.min.css";
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { loadDynamicBannerText } from '../components/banner';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initChat } from '../components/chat';
+import { animateOnBombClick } from '../components/feed';
 
 initMapbox();
 initChat();
+animateOnBombClick();
 
 if (document.querySelector('#banner-typed-text')) {
   loadDynamicBannerText();

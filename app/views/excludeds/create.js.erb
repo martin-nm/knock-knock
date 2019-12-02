@@ -1,0 +1,5 @@
+var card = document.querySelector("#post-<%= @post.id %>");
+card.classList.add("animated", "fadeOutUp");
+setTimeout(() => {card.remove()}, 500);
+// card.remove();
+

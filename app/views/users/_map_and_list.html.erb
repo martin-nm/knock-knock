@@ -9,7 +9,7 @@
     <div class="cards ">
       <!-- render partial user_cards -->
       <% @users.each do |user| %>
-        <div class="card-index-user user-<%= user.id %>" data-user="<%= user.id %>">
+        <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
           <%= link_to(user_path(user)) do %>
             <%#= cl_image_tag user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
             <div>

@@ -39,11 +39,6 @@ const initMapbox = () => {
       newMarker.getElement().addEventListener('mouseenter', (e) => toggleCardHighlighting(e) );
       // We put a microphone on listening for a mouseleave event
       newMarker.getElement().addEventListener('mouseleave', (e) => toggleCardHighlighting(e) );
-
-      new mapboxgl.Marker(element)
-        .setLngLat([ marker.lng, marker.lat ])
-        .setPopup(popup)
-        .addTo(map);
     });
 
     fitMapToMarkers(map, markers, 13);

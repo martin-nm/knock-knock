@@ -21,7 +21,10 @@
       <% end %>
 
       <div class="<%= "page-contenu" unless current_page?(root_path) %> ">
+        <div class="page_banner">
         <%= yield %>
+        </div>
+
       </div>
     </div>
 

@@ -115,3 +115,49 @@
   text-decoration: none;
 }
 
+.btn-4tiary-delete {
+  border-radius: 50px;
+  height:38px;
+  width:fit-content;
+  padding: 10px;
+  text-decoration:none;
+  background:transparent;
+  color: $corail !important;
+  border: 1px solid $corail !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.btn-4tiary-delete:hover {
+  background: $corail;
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.btn-4tiary-chat {
+  border-radius: 50px;
+  height:38px;
+  min-width: 122px;
+  padding: 10px;
+  text-decoration:none;
+  background:$purple;
+  color: $light-gray !important;
+  border: 1px solid $purple !important;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.btn-4tiary-chat:hover {
+  transition: background 0.3s ease;
+  color: $white !important;
+  opacity: 0.9;
+  text-decoration: none;
+  background: transparent;
+  border: $corail;
+}

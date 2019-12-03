@@ -132,7 +132,7 @@ puts 'Finished Post Sam'
 post_louis = Post.new( title: "DA experts?",
   content: "Salut les artistes ! There is some graphic designer nearby ? Need 2 or 3 advices about front-end aestetic issues ?",
    category:"expertise",
-  expires_at: "17h".to_datetime)
+  expires_at: "21h".to_datetime)
 post_louis.user = louis
 post_louis.save!
 

@@ -22,12 +22,18 @@ const initChat = () => {
               messages.insertAdjacentHTML('beforeend', data["message_html"]);
               messages.scrollTop = messages.scrollHeight;
             } else {
-              window.alert("You have a new conversation!")
+
+              const notifications = document.getElementById('notifications');
+              notifications.classList.remove("d-none");
+              // window.alert("You have a new conversation!")
             }
             // 1b. if this conversation page is with an other user:
             //   send a notif
           } else {
-            window.alert("You have a new message!")
+            // window.alert("You have a new message!")
+            const notifications = document.getElementById('notifications');
+            console.log(notifications);
+            notifications.classList.remove("d-none");
           }
           // 2. if we are on any other page, else:
           // display a notif window.alert

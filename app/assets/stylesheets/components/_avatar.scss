@@ -7,9 +7,9 @@
   }
 }
 .avatar-large {
-  width: 90px;
+  width: 100px;
   border-radius: 50%;
-  height:90px;
+  height:100px;
   object-fit: cover;
 }
 
@@ -19,4 +19,12 @@
   height:60px;
   object-fit: cover;
   border: solid 3px $middle-purple;
+}
+
+.xsmall-avatar {
+  width: 40px;
+  border-radius: 50%;
+  height:40px;
+  object-fit: cover;
+
 }

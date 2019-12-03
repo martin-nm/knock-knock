@@ -1,7 +1,7 @@
 .card-user {
   border-radius: 20px;
   background-color: $white;
-  padding: 20px;
+  // padding: 20px;
 }
 
 .cards.scrolling{
@@ -14,6 +14,7 @@
   border-radius: 20px;
   background-color: $white;
   padding: 20px;
+  width-max: 220px;
 }
 
 .card-index-user:active {
@@ -42,3 +43,6 @@
   width: 650px
 }
 
+.profile-card {
+  width: 75%;
+}

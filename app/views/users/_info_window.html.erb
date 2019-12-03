@@ -1,14 +1,12 @@
-<div class="map-user-container">
-  <div class="d-flex p-2">
-    <div class="rond p-2">
-    </div>
-    <div class="text-left p-2">
-      <%= link_to(user_path(user)) do %>
-
+<%= link_to(user_path(user)) do %>
+  <div class="map-user-container">
+    <div class="d-flex justrify-content-center align-items-center p-2">
+      <div class="rond p-2"></div>
+      <div class="text-left p-2">
         <h4 class="small-size"><%= user.first_name %></h4>
         <h2 class="xsmall-size"><%= user.job.upcase %></h2>
-      <% end %>
-      <div class="btn-link">see the profil</div>
+        <btn class="btn-link">see the profil</btn>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

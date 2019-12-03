@@ -24,7 +24,18 @@
       <% @users.each do |user| %>
         <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
           <%= link_to(user_path(user)) do %>
-            <%#= cl_image_tag user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <%= cl_image_tag user.photo.key, crop: :thumb, gravity: :face, class: "small-avatar" %>
+              </div>
+              <div>
+                <% if params[:range].present? %>
+                  <p><%= ((Geocoder::Calculations.distance_between([params[:longitude],params[:latitude]], [user.longitude, user.latitude])).round(2)) %>km</p>
+                <% else %>
+                  <p></p>
+                <% end %>
+              </div>
+            </div>
             <div>
               <h4 class="small-size"><%= user.first_name %></h4>
               <h2 class ="xsmall-size"><%= user.job.upcase %></h2>

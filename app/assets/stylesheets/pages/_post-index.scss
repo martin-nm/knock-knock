@@ -104,6 +104,7 @@ border-radius:20px;
 
 .remove {
   text-align: right;
+  font-size: 28px;
 }
 
 .btn-delete {
@@ -146,4 +147,12 @@ border-radius:20px;
   top:10vh;
   right:10vw;
   position: fixed;
+}
+
+.avatar-post img {
+  width: 60px;
+  border-radius: 50%;
+  height:60px;
+  object-fit: cover;
+  border: solid 3px $middle-purple;
 }

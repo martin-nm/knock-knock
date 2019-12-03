@@ -1,3 +1,9 @@
+<% if params[:range].present? %>
+  <h1 id="mid-purple"class="m-4 small-size"><%= pluralize @users.size, "knockie" %> around you</h1>
+<% else %>
+  <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
+<% end %>
+
 <div class="d-flex ml-4">
   <div class="map-box mr-3"
     id="map"

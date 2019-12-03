@@ -1,21 +1,19 @@
 
-<div class="container">
-  <div class= "top-banner m-4 mb-5">
-    <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
-  </div>
+<div class="big-container">
+  <div class="container m-4">
+    <div class= "top-banner mb-4">
+      <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
+    </div>
 
-  <div class="welcome p-4 m-4 ">
-    <h3 class="middle-size" id="white">Welcome back <%= current_user.first_name.capitalize %>!</h3>
-    <div class="image-welcome"><%= image_tag "test-index.svg", width:270 %></div>
+    <div class="welcome p-4 mb-4 ">
+      <h3 class="middle-size" id="white">Welcome back <%= current_user.first_name.capitalize %>!</h3>
+      <div class="image-welcome"><%= image_tag "test-index.svg", width:270 %></div>
 
-  </div>
-  <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
-  <div id="map_and_list">
-    <%= render "map_and_list" %>
-  </div>
-  <div class="pt-2 m-2">
-    <button class='btn-primari btn-locate localize' id='2kms' data-range="2">2kms around me</button>
-    <button class='btn-primari btn-locate localize' id='5kms' data-range="5">5kms around me</button>
-    <button class='btn-primari btn-locate localize' id='10kms' data-range="10">10kms around me</button>
+    </div>
+    <div id="map_and_list">
+      <%= render "map_and_list" %>
+    </div>
   </div>
 </div>
+
+

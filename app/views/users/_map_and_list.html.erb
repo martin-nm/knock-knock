@@ -23,21 +23,21 @@
       <% @users.each do |user| %>
         <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
           <%= link_to(user_path(user)) do %>
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <%= cl_image_tag user.photo.key, crop: :thumb, gravity: :face, class: "small-avatar" %>
-              </div>
-              <div>
+              <div class = "range">
                 <% if params[:range].present? %>
-                  <p><%= ((Geocoder::Calculations.distance_between([params[:longitude],params[:latitude]], [user.longitude, user.latitude])).round(2)) %>km</p>
+                  <h3 class ="small-size m-0"><%= ((Geocoder::Calculations.distance_between([params[:longitude],params[:latitude]], [user.longitude, user.latitude])).round(2)) %>km</h3>
                 <% else %>
-                  <p></p>
+                  <h3 class ="small-size m-0"></h3>
                 <% end %>
               </div>
-            </div>
-            <div>
-              <h4 class="small-size"><%= user.first_name %></h4>
-              <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
+            <div class="d-flex align-items-center">
+              <div>
+                <%= cl_image_tag user.photo.key, crop: :thumb, gravity: :face, class: "xsmall-avatar" %>
+              </div>
+              <div class="ml-3">
+                <h4 class="small-size "><%= user.first_name %></h4>
+                <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
+              </div>
             </div>
           <% end %>
         </div>

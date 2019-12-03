@@ -1,19 +1,14 @@
-<div class="map-user-container">
-  <div class="d-flex p-2">
-   <!--  <div class="rond p-2"> -->
+<%= link_to(user_path(user)) do %>
+  <div class="map-user-container">
+    <div class="d-flex p-2">
       <% if user.photo.attached? %>
-      <div class="avatar-small"><%= cl_image_tag user.photo.key, height:50, width:50 %></div>
-      <% end %>
-    <!-- </div> -->
-    <div class="text-left p-2">
-      <%= link_to(user_path(user)) do %>
-
+        <div class="avatar-small"><%= cl_image_tag user.photo.key, height:50, width:50 %></div>
+       <% end %>
+      <div class="text-left p-2">
         <h4 class="small-size"><%= user.first_name %></h4>
         <h2 class="xsmall-size"><%= user.job.upcase %></h2>
-      <% end %>
-      <div class="btn-link">see the profil</div>
+        <btn class="btn-link">see the profil</btn>
+      </div>
     </div>
   </div>
-</div>
-
-
+<% end %>

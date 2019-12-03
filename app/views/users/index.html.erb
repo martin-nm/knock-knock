@@ -3,7 +3,13 @@
   <div class= "top-banner m-4 mb-5">
     <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
   </div>
-  <h1 id="mid-purple"class="ml-4 mb-4 small-size">Find knockies nearby</h1>
+
+  <div class="welcome p-4 m-4 ">
+    <h3 class="middle-size" id="white">Welcome back <%= current_user.first_name.capitalize %>!</h3>
+    <div class="image-welcome"><%= image_tag "test-index.svg", width:270 %></div>
+
+  </div>
+  <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
   <div id="map_and_list">
     <%= render "map_and_list" %>
   </div>

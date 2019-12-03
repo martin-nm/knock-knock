@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @all_posts = Post.all.to_ary
 
     @all_posts.each do |post|
-      @expired_posts << post if post.expires_at < Date.today
+      @expired_posts << post if post.expires_at < Time.zone.now
     end
 
     @posts = Post.all.to_ary - @excluded_posts - @expired_posts

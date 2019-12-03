@@ -13,24 +13,22 @@
     <%= render 'shared/flashes' %>
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar' %>
-    <%end %>
+    <% end %>
 
-    <div class="<%= "all-contenu d-flex" unless current_page?(root_path) %> ">
-      <% unless current_page?(root_path)  %>
+    <div class="<%= "all-contenu d-flex" unless current_page?(root_path) %>">
+      <% unless current_page?(root_path) %>
         <%= render 'shared/navbar2' %>
       <% end %>
-
-      <div class="<%= "page-contenu" unless current_page?(root_path) %> ">
+      <div class="<%= "page-contenu" unless current_page?(root_path) %>">
         <div class="page_banner">
-        <%= yield %>
+          <%= yield %>
         </div>
-
       </div>
     </div>
 
     <% if current_page?(root_path) %>
       <%= render 'shared/footer' %>
-    <%end %>
+    <% end %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

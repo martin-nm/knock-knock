@@ -19,7 +19,8 @@ const initChat = () => {
             console.log(data)
             if (data["message"]["sender_id"] == currentConversationRecipientId) {
               const messages = document.querySelector('.messages-container');
-              messages.insertAdjacentHTML('afterbegin', data["message_html"]);
+              messages.insertAdjacentHTML('beforeend', data["message_html"]);
+              messages.scrollTop = messages.scrollHeight;
             } else {
               window.alert("You have a new conversation!")
             }

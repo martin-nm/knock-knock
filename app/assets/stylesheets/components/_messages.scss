@@ -11,7 +11,7 @@
   // margin-top:-30px;
   position: absolute;
   bottom: 0;
-  width: 94%;
+  width: 92%;
   padding-bottom: 20px;
 }
 
@@ -50,6 +50,9 @@
   width: 60%;
 }
 
+#message_text {
+  border-radius: 5px;
+}
 
 /* Clear floats */
 .light-container::after {

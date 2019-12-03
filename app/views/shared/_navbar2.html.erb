@@ -27,10 +27,11 @@
 
     <div class="conversations">
       <% if params[:controller] == "messages" %>
-
-        <% @chats.each do |chat| %>
-          <li><%= link_to chat[:name], new_user_message_path(chat[:id]) %></li>
-        <% end %>
+        <ul>
+          <% @chats.each do |chat| %>
+            <li><%= link_to chat[:name], new_user_message_path(chat[:id]) %></li>
+          <% end %>
+        </ul>
       <% end %>
 
     </div>

@@ -68,7 +68,7 @@ const initButtons = () => {
               .addTo(builtMap);
             const bounds = new mapboxgl.LngLatBounds();
             bounds.extend([ longitude, latitude ])
-            builtMap.fitBounds(bounds, { padding: 70, maxZoom: zoom, duration: 0 });
+            builtMap.fitBounds(bounds, { padding: 70, maxZoom: 13, duration: 0 });
           });
       });
      });

@@ -46,13 +46,12 @@
     </div>
 
 
-<%= link_to root_path do %>
- <div class="logout"><%= image_tag "logout.svg", width:45%></div>
- <% end %>
+  <%= link_to root_path do %>
+    <div class="logout"><%= image_tag "logout.svg", width:45%></div>
+  <% end %>
 
 
   </div>
-
 <% else %>
   <div class="navbar-frame p-4 ">
     <%= link_to root_path, class: "navbar-brand" do %>
@@ -60,5 +59,3 @@
     <% end %>
   </div>
 <% end %>
-
-</div>

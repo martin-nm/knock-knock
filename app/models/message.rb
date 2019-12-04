@@ -10,6 +10,7 @@ class Message < ApplicationRecord
     ChatChannel.broadcast_to(
       "received_messages_#{recipient_id}",
       message: self,
+      sender_id: sender_id,
       message_html: ApplicationController.renderer.render(partial: "messages/message", locals: { message: self, current_user_role: :recipient })
     )
   end

@@ -102,3 +102,29 @@
     right: 19px;
     bottom: 22px;
 }
+
+
+.notification-alert {
+  position: relative;
+  color: white;
+  font-size: 1.4em;
+  margin-left: 1em;
+  i {
+    opacity: 0.5;
+  }
+}
+
+.notification-alert.active .badge-notification {
+  background-color: $corail;
+}
+
+
+.badge-notification {
+  position: absolute;
+  top: 3px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: $light-gray;
+  border-radius: 50%;
+}

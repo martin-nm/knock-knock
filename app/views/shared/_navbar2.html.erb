@@ -30,7 +30,18 @@
       <% end %>
       <div class="menu-title d-flex">
         <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
-        <p id="white" class="menu-titles ml-4">Messages <span id="notifications" class="badge badge-light d-none">1</span></p>
+        <p id="white" class="menu-titles ml-4">Messages</p>
+        <div id="notifications" class="notification-alert">
+          <% if Message.where(recipient: current_user).empty? %>
+            No messages
+          <% else %>
+            <%= link_to new_user_message_path(Message.where(recipient: current_user).last.sender) do %>
+              <i class="fas fa-envelope"></i>
+            <% end %>
+          <% end %>
+
+          <div class="badge-notification"></div>
+        </div>
       </div>
 
 

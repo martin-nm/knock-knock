@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     else
       render "users/index"
     end
+
   end
 
   def show

@@ -11,7 +11,6 @@
   <li class="nav-item">
     <a class="tab-underlined nav-link" id="expertise-tab" data-toggle="tab" href="#expertise" role="tab" aria-controls="expertise" aria-selected="false">Expertise</a>
   </li>
-
 </ul>
 
 
@@ -54,13 +53,14 @@
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>
           </div>
-          <div class="m-5 text-right "> <%= link_to "answer to", class: "btn-secondary " %></div>
+          <div class="m-5 text-right "> </div>
       </div>
 
       <div class="div-delete">
         <% if post.user == current_user %>
-          <%= link_to "delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-tertiary" %>
+          <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
         <% else %>
+          <%= link_to "Start chat", user_messages_path(post.user), class: "btn-4tiary-chat" %>
         <% end %>
       </div>
 
@@ -215,9 +215,7 @@
   </div>
 
   <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab">
-    <div class = "btn-new">
-
-    </div>
+    <div class = "btn-new"></div>
   </div>
 
 </div>

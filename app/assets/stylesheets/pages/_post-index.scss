@@ -24,10 +24,14 @@
 }
 
 .card-post {
-  background:$corail-transparent;
+  background: $corail-transparent;
   border-radius: 20px;
   height: auto;
-  padding: 30px 30px 5px 30px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .card-post h2 {
@@ -107,29 +111,6 @@ border-radius:20px;
   font-size: 28px;
 }
 
-.btn-delete {
-  background:$white;
-  padding: 1px 22px;
-  border-radius: 8px;
-  color: $purple !important;
-  border: 1px solid $purple !important;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bolder;
-  border-radius: 0px 0px 8px 8px;
-  display: block;
-  width: 100%;
-}
-
-.btn-delete:hover {
-  background: $purple;
-  transition: background 0.3s ease;
-  color: $white !important;
-  opacity: 0.9;
-  text-decoration: none;
-}
-
 .card-center {
   flex-grow: 1;
 }
@@ -155,4 +136,8 @@ border-radius:20px;
   height:60px;
   object-fit: cover;
   border: solid 3px $middle-purple;
+}
+
+.div-delete {
+  align-self: flex-end;
 }

@@ -6,12 +6,12 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { loadDynamicBannerText } from '../components/banner';
 import { initMapbox, initButtons } from '../plugins/init_mapbox';
 import { initChat } from '../components/chat';
-import { animateOnBombClick } from '../components/feed';
+import { choppeCardsForFeed } from '../components/feed';
 
 initMapbox();
 initButtons();
 initChat();
-animateOnBombClick();
+choppeCardsForFeed();
 
 if (document.querySelector('#banner-typed-text')) {
   loadDynamicBannerText();

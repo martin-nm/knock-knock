@@ -7,14 +7,14 @@
 .cards.scrolling{
   overflow: scroll;
   height:490px;
-  margin-top:50px
+  margin-top:67px
 }
 
 .card-index-user {
   border-radius: 20px;
   background-color: $white;
   padding: 20px;
-  width-max: 220px;
+  max-height: 120px;
 }
 
 .card-index-user:active {
@@ -32,10 +32,14 @@
   height: 490px;
   width: 650px;
   border-radius: 20px;
+  margin-right: 40px;
 }
 
 .big-container{
-  max-width:95%!important
+    width: 100%;
+    padding: 30px 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -46,3 +50,4 @@
 .profile-card {
   width: 75%;
 }
+

@@ -1,17 +1,16 @@
 .cards, .cards-p {
   display: grid;
   grid-auto-rows: auto;
-
 }
 
 .cards {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 16px;
+  grid-gap: 16px;
 }
 
 .cards-p {
   grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+  grid-gap: 20px;
 }
 
 // Smallest device

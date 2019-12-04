@@ -264,14 +264,18 @@ puts "Users done 🤓"
 puts 'Creating posts...'
 
 post_aline = Post.new( title: "Battery Charger Urgency",
-content: "Hello knock-knock, I forgot my MacBook charger (13 pouces 2015) and I really need to finish a work, someone gots one to lend me ? Actually at Numa's café (in the 10th) but I can move around. xx ", category: "utility")
+  content: "Hello knock-knock, I forgot my MacBook charger (13 pouces 2015) and I really need to finish a work, someone gots one to lend me ? Actually at Numa's café (in the 10th) but I can move around. xx ",
+  category: "Utility",
+  expires_at: "16h".to_datetime)
 post_aline.user = aline
 post_aline.save!
 
 puts 'Finished Post Aline'
 
 post_sam = Post.new( title: "Come on",
-  content: "Hello there. I heard about a talk around the topic of 'IA for good' at @Le Wagon that promises to be really interesting, if some of us want to join me and maybe going have a drink after, feel free!", category:"community")
+  content: "Hello there. I heard about a talk around the topic of 'IA for good' at @Le Wagon that promises to be really interesting, if some of us want to join me and maybe going have a drink after, feel free!",
+  category: "Community",
+  expires_at: "17h".to_datetime)
 post_sam.user = sam
 post_sam.save!
 
@@ -279,7 +283,8 @@ puts 'Finished Post Sam'
 
 post_louis = Post.new( title: "DA experts?",
   content: "Salut les artistes ! There is some graphic designer nearby ? Need 2 or 3 advices about front-end aestetic issues ?",
-  category:"expertise")
+  category:"Expertise",
+  expires_at: "19h".to_datetime)
 post_louis.user = louis
 post_louis.save!
 
@@ -287,7 +292,8 @@ puts 'Finished Post Louis'
 
 post_eliza = Post.new( title: "Quelqu'un connait codeur.com ?",
   content: "https://www.codeur.com/users/c/developpement",
-  category:"expertise")
+  category:"Expertise",
+  expires_at: "21h".to_datetime)
 post_eliza.user = eliza
 post_eliza.save!
 
@@ -295,7 +301,8 @@ puts 'Finished Post Eliza'
 
 post_tanguy = Post.new( title: "Logiciels de montage vidéo",
   content: "Quel logiciel de montage vidéo me conseillez vous ?",
-  category:"expertise")
+  category:"Expertise",
+  expires_at: "23h".to_datetime)
 post_tanguy.user = tanguy
 post_tanguy.save!
 
@@ -303,7 +310,8 @@ puts 'Finished Post Tanguy'
 
 post_sergio = Post.new( title: "Vol de macbook...",
   content: "J'ai perdu mon sac avec mon Macbook au Starbucks des halles... C'est un sac Eastpack gris clair, quelqu'un l'aurait il récupéré ?",
-  category:"community")
+  category:"Utility",
+  expires_at: "22h".to_datetime)
 post_sergio.user = sergio
 post_sergio.save!
 
@@ -311,7 +319,8 @@ puts 'Finished Post Sergio'
 
 post_marine = Post.new( title: "Pause dej proche et pas cher",
   content: "Des idées pour la pause dej autour près des champs ?",
-  category:"community")
+  category:"Community",
+  expires_at: "23h".to_datetime)
 post_marine.user = marine
 post_marine.save!
 

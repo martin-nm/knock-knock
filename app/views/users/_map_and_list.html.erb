@@ -5,7 +5,7 @@
 <% else %>
   <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
 <% end %>
-    <div class="map-box mr-3"
+    <div class="map-box"
       id="map"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">

@@ -30,13 +30,15 @@
       <% end %>
       <div class="menu-title d-flex">
         <div id="notifications" class="notification-alert">
-          <% unless Message.where(recipient: current_user).empty? %>
+          <% if !Message.where(recipient: current_user).empty? %>
             <%= link_to new_user_message_path(Message.where(recipient: current_user).last.sender) do %>
               <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
             <% end %>
-          <% end %>
-
-          <div class="badge-notification"></div>
+            <div class="badge-notification"></div>
+            <% else %>
+              <div><%= image_tag "chat.svg", class: "icone_menu" %></div>
+              <div class="badge-notification"></div>
+            <% end %>
         </div>
         <p id="white" class="menu-titles ml-4">Messages</p>
       </div>
@@ -50,16 +52,12 @@
           <% end %>
         </ul>
       <% end %>
-
     </div>
-
-      
-  <%= link_to root_path do %>
-    <div class="logout"><%= image_tag "logout.svg", width:45%></div>
-  <% end %>
-
-
+    <%= link_to root_path do %>
+      <div class="logout"><%= image_tag "logout.svg", width:45%></div>
+    <% end %>
   </div>
+</div>
 <% else %>
   <div class="navbar-frame p-4 ">
     <%= link_to root_path, class: "navbar-brand" do %>
@@ -67,3 +65,4 @@
     <% end %>
   </div>
 <% end %>
+

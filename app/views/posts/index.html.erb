@@ -63,7 +63,7 @@
         <% if post.user == current_user %>
           <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
         <% else %>
-          <%= link_to "Start chat", user_messages_path(post.user), class: "btn-4tiary-chat" %>
+          <%= link_to "Start chat", new_user_message_path(post.user), class: "btn-4tiary-chat" %>
         <% end %>
       </div>
 
@@ -117,7 +117,7 @@
         <% if post.user == current_user %>
           <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
         <% else %>
-          <%= link_to "Start chat", user_messages_path(post.user), class: "btn-4tiary-chat" %>
+          <%= link_to "Start chat", new_user_message_path(post.user), class: "btn-4tiary-chat" %>
         <% end %>
       </div>
 
@@ -171,7 +171,7 @@
         <% if post.user == current_user %>
           <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
         <% else %>
-          <%= link_to "Start chat", user_messages_path(post.user), class: "btn-4tiary-chat" %>
+          <%= link_to "Start chat", new_user_message_path(post.user), class: "btn-4tiary-chat" %>
         <% end %>
       </div>
 
@@ -225,7 +225,7 @@
         <% if post.user == current_user %>
           <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
         <% else %>
-          <%= link_to "Start chat", user_messages_path(post.user), class: "btn-4tiary-chat" %>
+          <%= link_to "Start chat", new_user_message_path(post.user), class: "btn-4tiary-chat" %>
         <% end %>
       </div>
 

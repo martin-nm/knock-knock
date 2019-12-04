@@ -3,13 +3,13 @@
     <a class="tabs-borders tab-underlined nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
   </li>
   <li class="nav-item">
-    <a class="tab-underlined nav-link" id="community-tab" data-toggle="tab" href="#community" role="tab" aria-controls="community" aria-selected="false">Community</a>
+    <a class="tabs-borders tab-underlined nav-link" id="community-tab" data-toggle="tab" href="#community" role="tab" aria-controls="community" aria-selected="false">Community</a>
   </li>
   <li class="nav-item">
-    <a class="tab-underlined nav-link" id="utility-tab" data-toggle="tab" href="#utility" role="tab" aria-controls="utility" aria-selected="false">Utility</a>
+    <a class="tabs-borders tab-underlined nav-link" id="utility-tab" data-toggle="tab" href="#utility" role="tab" aria-controls="utility" aria-selected="false">Utility</a>
   </li>
   <li class="nav-item">
-    <a class="tab-underlined nav-link" id="expertise-tab" data-toggle="tab" href="#expertise" role="tab" aria-controls="expertise" aria-selected="false">Expertise</a>
+    <a class="tabs-borders tab-underlined nav-link" id="expertise-tab" data-toggle="tab" href="#expertise" role="tab" aria-controls="expertise" aria-selected="false">Expertise</a>
   </li>
 </ul>
 
@@ -27,7 +27,7 @@
           <div class="category "><h2 class="xsmall-size m-0 padding-category"id="white" ><%= post.category %></h2></div>
           <div class="remove">
             <div>
-              <%= link_to "❌", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
+              <%= link_to "hide", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
             </div>
             <div>
               <progress id="file" style="width: 40px;" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>"></progress>
@@ -51,7 +51,6 @@
 
           <div class="d-flex justify-content-between ">
               <h1 class="small-size p-2"><%= post.title %></h1>
-          <h5 class="created p-2" style="max-width: 78px; text-align: right;"  id="blue"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
           </div>
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>
@@ -81,7 +80,7 @@
           <div class="category "><h2 class="xsmall-size m-0 padding-category"id="white" ><%= post.category %></h2></div>
           <div class="remove">
             <div>
-              <%= link_to "❌", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
+              <%= link_to "hide", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
             </div>
             <div>
               <progress id="file" style="width: 40px;" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>"></progress>
@@ -105,7 +104,6 @@
 
           <div class="d-flex justify-content-between ">
               <h1 class="small-size p-2"><%= post.title %></h1>
-          <h5 class="created p-2" style="max-width: 78px; text-align: right;"  id="blue"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
           </div>
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>
@@ -135,7 +133,7 @@
           <div class="category "><h2 class="xsmall-size m-0 padding-category"id="white" ><%= post.category %></h2></div>
           <div class="remove">
             <div>
-              <%= link_to "❌", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
+              <%= link_to "hide", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
             </div>
             <div>
               <progress id="file" style="width: 40px;" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>"></progress>
@@ -159,7 +157,6 @@
 
           <div class="d-flex justify-content-between ">
               <h1 class="small-size p-2"><%= post.title %></h1>
-          <h5 class="created p-2" style="max-width: 78px; text-align: right;"  id="blue"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
           </div>
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>
@@ -189,7 +186,7 @@
           <div class="category "><h2 class="xsmall-size m-0 padding-category"id="white" ><%= post.category %></h2></div>
           <div class="remove">
             <div>
-              <%= link_to "❌", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
+              <%= link_to "hide", post_excludeds_path(post), method: :post, remote: true, id: "bomb" %>
             </div>
             <div>
               <progress id="file" style="width: 40px;" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>"></progress>
@@ -213,7 +210,6 @@
 
           <div class="d-flex justify-content-between ">
               <h1 class="small-size p-2"><%= post.title %></h1>
-          <h5 class="created p-2" style="max-width: 78px; text-align: right;"  id="blue"><%= post.created_at.strftime("%d %b - %I.%M") %></h5>
           </div>
           <div class="card-post-content " >
             <p class="small-size" id="blue"><%= post.content %></p>

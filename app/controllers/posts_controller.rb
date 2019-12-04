@@ -18,9 +18,9 @@ class PostsController < ApplicationController
     end
 
     @posts = Post.all.to_ary - @excluded_posts - @expired_posts
-    @community_posts = Post.where(category: 'community').to_ary - @excluded_posts
-    @utility_posts = Post.where(category: 'utility').to_ary - @excluded_posts
-    @expertise_posts = Post.where(category: 'expertise').to_ary - @excluded_posts
+    @community_posts = Post.where(category: 'Community').to_ary - @excluded_posts - @expired_posts
+    @utility_posts = Post.where(category: 'Utility').to_ary - @excluded_posts - @expired_posts
+    @expertise_posts = Post.where(category: 'Expertise').to_ary - @excluded_posts - @expired_posts
   end
 
   def new

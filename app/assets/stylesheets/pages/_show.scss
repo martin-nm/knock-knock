@@ -1,7 +1,29 @@
 
 .avatar-large img {
-  width: 90px;
+  width: 120px;
   border-radius: 50%;
-  height:90px;
+  height:120px;
   object-fit: cover;
+}
+ a:hover {
+  text-decoration: none;
+ }
+
+.image-fond {
+  position: relative;
+    left: 685px;
+    top: -344px;
+    z-index: -1;
+    width: 238px;
+
+}
+
+.card-network {
+  margin: 20px;
+  border-radius: 20px;
+  background-color: $purple;
+  width: 25vw;
+  height: 150px;
+  padding: 20px 20px 20px 20px;
+
 }

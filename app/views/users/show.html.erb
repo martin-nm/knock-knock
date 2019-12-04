@@ -1,34 +1,54 @@
-<div class = "container">
-  <div class= "card-user  p-4 mt-3 col-12">
+<div class = "big-container">
+  <div class= "top-banner mb-4">
+        <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
+    </div>
 
-    <div class= "card-all-info  d-flex justify-content-start" >
-      <% if @user.photo.attached? %>
-      <div class="avatar-large m-2"><%= cl_image_tag @user.photo.key, height:50, width:50 %></div>
-      <% end %>
-      <div class= card-global-info>
-        <h4 class="middle-size"><%= @user.first_name %> </h4>
-        <h3 class="small-size pb-2"><em>"<%= @user.status %>"</em></h3>
-        <h2 class ="small-size mb-3"><%= @user.job.upcase %></h2>
-        <div class = "btn-start">
-        <div class= "mt-4 ">
-          <%= link_to render("shared/button", text: "START TO CHAT"), new_user_message_path(@user.id) %>
+
+<div class="profil-container">
+  <div class="white-card">
+
+      <div class= "card-all-info  d-flex justify-content-start " >
+        <% if @user.photo.attached? %>
+          <div class="avatar-large">
+            <%= cl_image_tag @user.photo.key, height:50, width:50 %>
+          </div>
+        <% end %>
+        <div class= "card-global-info ml-3">
+            <h4 class="big-size"><%= @user.first_name %> </h4>
+          <h2 class ="small-size"><%= @user.job.upcase %></h2>
         </div>
       </div>
+  </div>
+
+  <div class="statut">
+            <h3 class="middle-size" id ="white"><em>"<%= @user.status %>"</em></h3>
+  </div>
+
+<div class="d-flex">
+      <div class= "card-bio ">
+        <h2 class ="small-size">ABOUT</h2>
+        <p id ="blue"> <%= @user.bio %> </p>
+      </div>
+   <div class= "card-network" >
+    <div class="d-flex align-items-center pl-3">
+    <%= image_tag "website.svg", class: "icone_menu" %>
+    <p id="white" class="menu-titles ml-4"><%= @user.first_name.downcase%>-<%= @user.last_name.downcase%>.com</p>
     </div>
+    <p id="white">Linkedin :<%= @user.first_name.downcase%>-<%= @user.last_name.downcase%></p>
+  </div>
+</div>
+
+</div>
+  <div>
+
+      <%= link_to render("shared/button", text: "SEND A MESSAGE"), new_user_message_path(@user.id) %>
+   </div>
+
+</div>
+
+  <div class="image-fond">
+    <%= image_tag "show.svg" %>
   </div>
 
 
-
-<div class="mt-4 row">
-  <div class="col-4">
-     <div class= "card-user p-4 ">
-      <p>Website : aline-michet.com </p>
-      <p>Linkedin : aline-michet </p>
-    </div>
-  </div>
-  <div class="col-8">
-    <div class= "card-user  p-4">
-      <p> <strong>About :</strong> <%= @user.bio %> </p>
-    </div>
-  </div>
 </div>

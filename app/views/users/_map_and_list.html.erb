@@ -1,25 +1,31 @@
  <div class="d-flex  ">
   <div class="sticky-index">
-<% if params[:range].present? %>
-  <h1 id="mid-purple"class="m-4 small-size"><%= pluralize @users.size, "knockie" %> around you</h1>
-<% else %>
-  <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
-<% end %>
+    <% if params[:range].present? %>
+      <h1 id="mid-purple"class="m-4 small-size"><%= pluralize @users.size, "knockie" %> around you</h1>
+    <% else %>
+      <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
+    <% end %>
     <div class="map-box mr-3"
       id="map"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      <div class="map-hover d-none">
+        <div class="d-flex justify-content-center text-center">
+          <div class="spinner-grow" style="width: 3rem; height: 3rem; color: $corail;" role="status">
+            <span class="sr-only" style="">Loading...</span>
+          </div>
+        </div>
+      </div>
     </div>
-   <div class="btn-localisation d-flex  justify-content-center mt-1">
-      <button class='btn-secondary localize m-2' id='2kms' data-range="2">2 km</button>
-      <button class='btn-secondary localize m-2' id='5kms' data-range="5">5 km </button>
-      <button class='btn-secondary localize m-2' id='10kms' data-range="10">10 km</button>
+    <div class="btn-localisation d-flex  justify-content-center mt-1">
+      <button class='btn-secondary localize m-2' data-range="2">2 kms</button>
+      <button class='btn-secondary localize m-2' data-range="5">5 kms </button>
+      <button class='btn-secondary localize m-2' data-range="10">10 kms</button>
     </div>
   </div>
 
   <div class ="flex-grow-1  ">
     <div class="cards scrolling">
-      <!-- render partial user_cards -->
       <% @users.each do |user| %>
         <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
           <%= link_to(user_path(user)) do %>
@@ -37,6 +43,7 @@
               <div class="ml-3">
                 <h4 class="small-size "><%= user.first_name %></h4>
                 <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
+                <h2 class ="xsmall-size"><%= user.status %></h2>
               </div>
             </div>
           <% end %>

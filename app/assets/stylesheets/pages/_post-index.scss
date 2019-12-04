@@ -42,8 +42,6 @@
 .card-post-info {
   margin-left: 2px;
   border-bottom: 2px solid $middle-purple-transparent;
-
-
 }
 
 .user-created {
@@ -55,8 +53,6 @@
 .created {
   color: $middle-purple-transparent;
   font-size: 12px;
-
-
 }
 
 .user {
@@ -69,10 +65,7 @@
 }
 
 .card-post-content {
-
-
   line-height:26px;
-
 }
 
 .content {
@@ -104,11 +97,11 @@ border-radius:20px;
   width:100px;
   height:30px;
   text-align: center;
-  }
+}
 
 .remove {
   text-align: right;
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .card-center {
@@ -125,8 +118,8 @@ border-radius:20px;
 }
 
 .new-post {
-  top:10vh;
-  right:10vw;
+  top:6vh;
+  right: 3.3vw;
   position: fixed;
 }
 
@@ -140,4 +133,10 @@ border-radius:20px;
 
 .div-delete {
   align-self: flex-end;
+}
+
+.tabs-borders {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }

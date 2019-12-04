@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs tabs-underlined format-onglets ml-5" id="myTab" role="tablist">
+<ul class="nav nav-tabs tabs-underlined format-onglets ml-5" id="myTab" role="tablist" style="position: relative;">
   <li class="nav-item">
     <a class="tabs-borders tab-underlined nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
   </li>
@@ -11,10 +11,12 @@
   <li class="nav-item">
     <a class="tabs-borders tab-underlined nav-link" id="expertise-tab" data-toggle="tab" href="#expertise" role="tab" aria-controls="expertise" aria-selected="false">Expertise</a>
   </li>
+  <li>
+    <%= link_to "New Post", new_post_path, class: "btn-secondary new-post" %>
+  </li>
 </ul>
 
 
-<div class="m-5 text-right "> <%= link_to "New Post", new_post_path, class: "btn-secondary new-post " %></div>
 
 <div class="tab-content" id="myTabContent">
 

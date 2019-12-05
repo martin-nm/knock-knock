@@ -4,7 +4,7 @@
   height: 47px;
   opacity: 0.8;
   border-radius: 20px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 
 }
 
@@ -13,10 +13,9 @@
   border-radius:20px;
   height: 80px;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   span {
     color: $purple;
-    text-decoration: overline;
   }
 }
 
@@ -34,6 +33,7 @@
 
 .results {
   margin-left: 25px;
+  margin-bottom: 2em;
 }
 
 #map_and_list {

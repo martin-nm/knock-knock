@@ -16,7 +16,8 @@
 
   <div class="messages-container">
     <div class="welcome-container">
-      <h4 class="middle-size">KNOCK-KNOCK</h4><p class="small-size" id="blue">Start the chat!</p>
+      <%= image_tag "logo-knock-couleur.svg",width:150 %>
+      <h3 class="small-size mt-2" >Start chatting!</h3>
     </div>
     <% @messages.each do |message| %>
       <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
@@ -37,6 +38,10 @@
 
 
 <input type="hidden" id="recipient-id" value="<%= @user.id %>">
+
+<div class="image-fond-message">
+    <%= image_tag "message-illu.svg" %>
+</div>
 
 
 

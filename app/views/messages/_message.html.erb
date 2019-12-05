@@ -2,7 +2,7 @@
 <div class="light-container m-2 <%= 'darker' if current_user_role == :recipient %>">
 
   <% if message.sender.photo.attached? %>
-    <div class="avatar-small"><%= cl_image_tag message.sender.photo.key, height:40, width:40%></div>
+    <div class="avatar-small"><%= cl_image_tag message.sender.photo.key,crop: :thumb, gravity: :face, height:40, width:40%></div>
     <% end %>
   <p class="mb-1"><h1 class="small-size"><%= message.sender.first_name %></h1><h4 class="small-size"><%= message.text %></h4></p>
   <div class="text-right">

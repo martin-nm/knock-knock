@@ -9,7 +9,7 @@
       <% if current_user.photo.attached? %>
         <div>
           <div class="text-center">
-            <%= cl_image_tag current_user.photo.key, class: "small-avatar"%>
+            <%= cl_image_tag current_user.photo.key, crop: :thumb, gravity: :face, class: "small-avatar"%>
           </div>
           <div>
             <h2 class="xsmall-size text-center pt-3 m-0 " id="white"><%=current_user.first_name.upcase %> <%=current_user.last_name.upcase %> </h2>

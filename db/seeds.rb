@@ -32,7 +32,7 @@ louis = User.new(first_name: "Louis",
   email: "louis-seguin@gmail.com",
   password:"123456", job: "Developper",
   bio: "I'm Reactjs Java Firebase Developper based in Paris, working remotely",
-  status:"Hey Knockies, I'm looking for missions in the Travel & Tourism sector",
+  status:"Looking for missions in the Travel & Tourism sector",
   location: "1 avenue du Colonel Henri Rol-Tanguy, 75014 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1115&q=80')
@@ -69,7 +69,7 @@ DB: SQL, SQLite, PostgreSQL.
 Cloud: AWS
 Devops: Kubernetes, Docker, CI/CD
 others: Data science, Machine learning",
-  status:"Hey Knockies, I'm currently in Paris for 3 weeks",
+  status:"In Paris for 3 weeks",
   location: "2 avenue Trudaine, 75009 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1548536515-67545ff2ecc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
@@ -84,7 +84,7 @@ remy = User.new(first_name: "Remy",
   email: "remy-tallot@gmail.com",
   password:"123456", job: "Developpeur Python",
   bio: "Computer Science Engineer - Python & JavaScript. I am a professional driven by passion. Naturally curious, thorough and resourceful, I consistently execute and deliver high quality products that meet user needs.",
-  status:"Hey Knockies, I'm new in Paris, looking for good spots",
+  status:"New in Paris, looking for good spots",
   location: "2 rue des Martyrs, 75009 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80')
@@ -99,7 +99,7 @@ paul = User.new(first_name: "Paul",
   email: "paul-ungar@gmail.com",
   password:"123456", job: "Developpeur web fullstack - ReactJs/NodeJs",
   bio: " Après 8 ans dans le milieu médical me permettant notamment de développer mes compétences d'organisation, j'ai choisi de me reconvertir  dans le développement web. J'ai suivi la formation du Wagon, école innovante dont la pédagogie est orientée vers le développement de l'autonomie, l'entraide et la réalisation de projets concrets.",
-  status:"Hey Knockies, je me forme à React JS, qui connait ???",
+  status:"Je me forme à React JS, qui connait ???",
   location: "2 rue Oberkampf, 75011 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1546672657-366775449156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
@@ -114,7 +114,7 @@ myriam = User.new(first_name: "Myriam",
   email: "myriam-belawa@gmail.com",
   password:"123456", job: "Photographe",
   bio: "Passionnée de photo depuis toujours, j'exerce ma passion en tant que Freelance. Particulièrement à l'aise avec la nature morte et les portraits.",
-  status:"Hey Knockies, je cherche un peu d'aide sur photoshop",
+  status:"Je cherche un peu d'aide sur photoshop",
   location: "2 rue de lappe, 75011 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1573497160825-0d94a2724d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
@@ -129,7 +129,7 @@ yohan = User.new(first_name: "Yohan",
   email: "yohan-nerdeux@gmail.com",
   password:"123456", job: "Entrepreneur",
   bio: "Actuellement en train de monter un espace de coworking dans le 14ème arrondissement. Pasionné par l'éducation et le commerce équitable. Je veux utiliser ce nouvel espace pour vous y faire découvrir mes passions.",
-  status:"Hey Knockies, j'ai besoin de vos retours sur les espace de coworkings à paris",
+  status:"J'ai besoin de vos retours sur les espace de coworkings à paris",
   location: "18 Avenue de Lowendal, 75015 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1530256362889-919cbb409b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=738&q=80')
@@ -144,7 +144,7 @@ marine = User.new(first_name: "Marine",
   email: "marine-parre@gmail.com",
   password:"123456", job: "Consultant en conduite du changement",
   bio: "Après une mission passionnante chez Monoprix je souhaite utiliser mes compétences acquises en conduite du changement pour aider des entreprises rencontrant ces problématiques.",
-  status:"Hey Knockies, quelqu'un aurait-il des contacts chez Get around ?",
+  status:"Quelqu'un aurait-il des contacts chez Get around ?",
   location: "8 Avenue de la grande armée, 75017 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
@@ -159,7 +159,7 @@ sergio = User.new(first_name: "Sergio",
   email: "sergio-umtiti@gmail.com",
   password:"123456", job: "Développeur JavaScript",
   bio: "Après un bootcamp parisien en formation développement web, j'ai décidé de me spécialiser dans le langage JS.",
-  status:"Hey Knockies, je suis les cours de JS 30, qui veux être mon buddy?",
+  status:"Je suis les cours de JS 30, qui veux être mon buddy?",
   location: "58 quai de la rapée, 75012 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
@@ -174,7 +174,7 @@ tanguy = User.new(first_name: "Tanguy",
   email: "tanguy-leclerc@gmail.com",
   password:"123456", job: "Monteur cinéaste",
   bio: "Passionné de cinéma, j'ai fait une école de monteur et monte des films comme personne",
-  status:"Hey Knockies, on cherche des figurants pour le prochain OSS, ça tente quelqu'un?",
+  status:"Je cherche des figurants pour le prochain OSS, ça tente quelqu'un?",
   location: "13 Rue Saint-Georges, 75009 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1635&q=80')
@@ -234,7 +234,7 @@ celine = User.new(first_name: "Celine",
   email: "celine-grimault@gmail.com",
   password:"123456", job: "Freelance UX Design - Dev iOS Junior",
   bio: "Conception de Wireframes - Réalisation de prototypes et d’interfaces graphiques - Réalisation de benchmark concurrentiels - Recherche Utilisateurs",
-  status:"Anyone free for beer tonight around Menilmontant?",
+  status:"Anyone free for some beers tonight around Menilmontant?",
   location: "40 rue de Menilmontant 75020 Paris")
 
 file = URI.open('https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=335&q=80')

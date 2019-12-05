@@ -10,7 +10,7 @@
       <div class= "card-all-info  d-flex justify-content-start " >
         <% if @user.photo.attached? %>
           <div class="avatar-large">
-            <%= cl_image_tag @user.photo.key, height:50, width:50 %>
+            <%= cl_image_tag @user.photo.key, gravity: :face, height:50, width:50 %>
           </div>
         <% end %>
         <div class= "card-global-info ml-3">

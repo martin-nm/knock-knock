@@ -11,10 +11,11 @@
 }
 
 .card-index-user {
+  border: 2px solid transparent;
   border-radius: 20px;
   background-color: $white;
   padding: 20px;
-  max-height: 120px;
+  height: 110px;
 }
 
 .card-index-user:active {
@@ -25,7 +26,9 @@
 
 .card-index-user:hover {
   background-color: $white;
-  border: 2px solid $middle-purple ;
+  border: 2px solid $middle-purple;
+  transition-timing-function: ease;
+  transition: 0.3s;
 }
 
 .map-box {
@@ -49,5 +52,23 @@
 
 .profile-card {
   width: 75%;
+}
+
+.card-index-user .username {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  span {
+    border-left: 1px solid rgba(0,0,0,0.1);
+    padding-left: 5px;
+    flex: 0 0 65px;
+    font-size: 0.8em;
+    color: $purple;
+  }
+}
+
+.card-index-user-info {
+  padding-left: 1em;
+  flex: 1;
 }
 

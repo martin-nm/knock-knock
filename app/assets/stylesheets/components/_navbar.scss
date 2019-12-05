@@ -10,13 +10,11 @@
   flex-grow: 0;
   margin-right: 45px;
 }
-.nav-link {
 
-  &:hover {
-    font-weight: bolder;
+.nav-link:hover {
     color: $purple;
+    border-bottom-color: $purple!important;
   }
-}
 
 .nav-link.active {
   color: $purple;

@@ -6,15 +6,24 @@
     <h3 class="middle-size" id="corail">Knock-Knock Chat with <%= @user.first_name %></h3>
   </div>
 
+<!--   <div class="chat-welcome">
+    <%# if Message.where(recipient: @user, sender: current_user).empty? %>
+      <p>Start to chat!</p>
+    <%# end %>
+  </div> -->
+
+
+
   <div class="messages-container">
+    <div class="welcome-container">
+      <h4 class="middle-size">KNOCK-KNOCK</h4><p class="small-size" id="blue">Start the chat!</p>
+    </div>
     <% @messages.each do |message| %>
       <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
     <% end %>
   </div>
 
   <div class="form-chat">
-    <div class="row">
-      <div class= "col-md-6 col-md-offset-3">
         <%= simple_form_for([@user, @message], remote: true) do |f| %>
           <%= f.input :text, placeholder: "Type your message", label: false %>
           <%#= f.submit "KNOCK", class: "btn-submit", id: "submit-button" %>
@@ -22,8 +31,6 @@
            <i class="fas fa-paper-plane"></i>
           <% end %>
         <% end %>
-      </div>
-    </div>
   </div>
 
 </div>

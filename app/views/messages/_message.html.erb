@@ -4,10 +4,10 @@
   <% if message.sender.photo.attached? %>
     <div class="avatar-small"><%= cl_image_tag message.sender.photo.key,crop: :thumb, gravity: :face, height:40, width:40%></div>
     <% end %>
-  <p class="mb-1"><h1 class="small-size"><%= message.sender.first_name %></h1><h4 class="small-size"><%= message.text %></h4></p>
+  <p class="mb-1"><h4 class="middle-size"><%= message.sender.first_name %></h4><p class="small-size" id="blue"><%= message.text %></p></p>
   <div class="text-right">
     <small>
-      <%= message.created_at.time.to_formatted_s(:short) %>
+      <p><%= message.created_at.time.to_formatted_s(:short) %></p>
     </small>
   </div>
 </div>

@@ -38,7 +38,7 @@
       </div>
 
     <div class="message-cta" >
-        <%= link_to render("shared/button", text: "SEND A MESSAGE"), new_user_message_path(@user.id) %>
+        <%= link_to render("shared/button", text: "Start chat"), new_user_message_path(@user.id) %>
      </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
     </div>
     <% if @user.posts.present?%>
     <div class="current-post">
-      <h1 class="middle-size"> <%=@user.first_name.downcase%>'s current post</h1>
+      <h1 class="middle-size ml-4 mb-4"> <%=@user.first_name.downcase%>'s post</h1>
       <% @user.posts.each do |post| %>
       <div class="card-post" id="post-<%= post.id %>">
 
@@ -70,7 +70,10 @@
         </div>
       </div>
      <% end %>
-      <%= link_to "See more posts", posts_path, class: "btn-link " %>
+     <br>
+     <div class="ml-4">
+       <%= link_to "See more posts", posts_path, class: "btn-link" %>
+     </div>
     </div>
     <% end %>
   </div>

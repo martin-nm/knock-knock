@@ -10,7 +10,7 @@
   opacity: .4;
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 4px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .tabs-underlined .tab-underlined.active {
@@ -25,8 +25,9 @@
 
 .card-post {
   position: relative;
-  background: $corail-transparent;
+  background: $light-gray;
   border-radius: 20px;
+  border: 1px solid #f0f0f0;
   padding: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -91,10 +92,8 @@
 }
 
 .category {
-  border-radius: 20px;
-  background-color: $corail;
-  color: $white;
-  text-align: center;
+  background-color: $light-gray;
+  color: $middle-gray;
   font-size: 12px;
   padding: 3.5px 0px;
   flex: 0 0 50%;
@@ -133,6 +132,7 @@
 
 .div-delete {
   align-self: flex-end;
+  margin-top: 20px;
 }
 
 .tabs-borders {
@@ -174,4 +174,8 @@
     font-size: 12px;
 
   }
+}
+
+.progress-b {
+
 }

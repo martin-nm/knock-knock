@@ -9,16 +9,16 @@
           <h2 class="category"><%= post.category %></h2>
           <% if ((post.expires_at - Time.zone.now)/86400*24) > 1 %>
             <% hours_remaining = ((post.expires_at - Time.zone.now)/86400*24).to_i %>
-            <div><progress id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining %>h"></progress></div>
+            <div><progress class="progress-b" id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining %>h"></progress></div>
           <% else %>
             <% hours_remaining2 = (((post.expires_at - Time.zone.now)/86400*24)*60).to_i %>
-            <div><progress id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining2 %>m"></progress></div>
+            <div><progress class="progress-b" id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining2 %>m"></progress></div>
           <% end %>
         </div>
         <div class="card-center">
 
           <div class="card-post-info d-flex mb-2 ">
-            <div class ="p-2 ">
+            <div class ="p-2">
               <% if post.user.photo.attached? %>
               <div class="avatar-post"><%= cl_image_tag post.user.photo.key, height:50, width:50 %></div>
               <% end %>

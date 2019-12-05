@@ -1,0 +1,50 @@
+<div class="cards-p">
+  <% posts.each do |post| %>
+    <div class="card-post" id="post-<%= post.id %>">
+      <%= link_to post_excludeds_path(post), method: :post, remote: true, id: "bomb" do %>
+        <%= image_tag "croix.svg" %>
+      <% end %>
+
+        <div class="cat-remove">
+          <h2 class="category"><%= post.category %></h2>
+          <% if ((post.expires_at - Time.zone.now)/86400*24) > 1 %>
+            <% hours_remaining = ((post.expires_at - Time.zone.now)/86400*24).to_i %>
+            <div><progress id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining %>h"></progress></div>
+          <% else %>
+            <% hours_remaining2 = (((post.expires_at - Time.zone.now)/86400*24)*60).to_i %>
+            <div><progress id="file" max="100" value="<%= 100 - (post.expires_at - Time.zone.now) / 86400 * 100 %>" content="<%= hours_remaining2 %>m"></progress></div>
+          <% end %>
+        </div>
+        <div class="card-center">
+
+          <div class="card-post-info d-flex mb-2 ">
+            <div class ="p-2 ">
+              <% if post.user.photo.attached? %>
+              <div class="avatar-post"><%= cl_image_tag post.user.photo.key, height:50, width:50 %></div>
+              <% end %>
+            </div>
+            <div class ="ml-3 mt-3">
+              <h4 class="user"><%= post.user.first_name %></h4>
+              <h2 class="xsmall-size"><%= post.user.job.upcase %></h2>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between ">
+              <h1 class="small-size"><%= post.title %></h1>
+          </div>
+          <div class="card-post-content" >
+            <p class="small-size" id="blue"><%= post.content.truncate(200) %></p>
+          </div>
+      </div>
+
+      <div class="div-delete">
+        <% if post.user == current_user %>
+          <%= link_to "Delete my post", post_path(post), data: { confirm: "Are you sure you want to delete your post?" }, method: :delete, class: "btn-4tiary-delete" %>
+        <% else %>
+          <%= link_to "Start chat", new_user_message_path(post.user), class: "btn-4tiary-chat" %>
+        <% end %>
+      </div>
+
+    </div>
+     <% end %>
+    </div>

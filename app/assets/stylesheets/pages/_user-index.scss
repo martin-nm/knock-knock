@@ -4,6 +4,7 @@
   height: 47px;
   opacity: 0.8;
   border-radius: 20px;
+  margin-bottom: 1em;
 
 }
 
@@ -12,6 +13,11 @@
   border-radius:20px;
   height: 80px;
   position: relative;
+  margin-bottom: 1em;
+  span {
+    color: $purple;
+    text-decoration: overline;
+  }
 }
 
 .image-welcome {
@@ -26,10 +32,10 @@
   object-fit: cover;
 }
 
+.results {
+  margin-left: 25px;
+}
 
-.range {
- text-align: right;
- margin-top: -10px;
- margin:0px;
- padding-right:5px;
+#map_and_list {
+  height: calc(100% - 215px);
 }

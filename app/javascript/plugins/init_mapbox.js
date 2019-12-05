@@ -56,7 +56,6 @@ const clickHandler = (event) => {
   document.querySelector('.map-hover').classList.remove('d-none');
   const range = event.currentTarget.getAttribute("data-range");
   navigator.geolocation.getCurrentPosition(e => {
-    console.log('hello');
     const latitude = e.coords.latitude;
     const longitude = e.coords.longitude;
     fetch(`/users?onlyUsers=1&latitude=${latitude}&longitude=${longitude}&range=${range}`)

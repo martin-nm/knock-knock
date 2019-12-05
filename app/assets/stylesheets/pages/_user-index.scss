@@ -4,6 +4,7 @@
   height: 47px;
   opacity: 0.8;
   border-radius: 20px;
+  margin-bottom: 2em;
 
 }
 
@@ -12,6 +13,10 @@
   border-radius:20px;
   height: 80px;
   position: relative;
+  margin-bottom: 3em;
+  span {
+    color: $purple;
+  }
 }
 
 .image-welcome {
@@ -26,10 +31,8 @@
   object-fit: cover;
 }
 
-
-.range {
- text-align: right;
- margin-top: -10px;
- margin:0px;
- padding-right:5px;
+.results {
+  margin-left: 25px;
+  margin-bottom: 3em;
 }
+

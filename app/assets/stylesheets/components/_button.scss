@@ -114,3 +114,7 @@
   border: 1px solid $corail !important;
   transition: .3s;
 }
+
+button:focus {
+  text-decoration: none;
+}

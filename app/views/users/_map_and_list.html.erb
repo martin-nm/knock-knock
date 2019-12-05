@@ -1,12 +1,15 @@
  <div class="d-flex  ">
   <div class="sticky-index">
-<% if params[:range].present? %>
-  <h1 id="mid-purple"class="m-4 small-size"><%= pluralize @users.size, "knockie" %> around you</h1>
-<% else %>
-  <h1 id="mid-purple"class="m-4 small-size">Find knockies nearby</h1>
-<% end %>
+    <div class="results">
+      <% if params[:range].present? %>
+        <h1 id="mid-purple"class="small-size"><%= pluralize @users.size, "knockie" %> around you</h1>
+      <% else %>
+        <h1 id="mid-purple"class="small-size">Find knockies nearby</h1>
+      <% end %>
+    </div>
     <div class="map-box"
       id="map"
+      style="height: 400px"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       <div class="map-hover d-none">
@@ -24,26 +27,24 @@
     </div>
   </div>
 
-  <div class ="flex-grow-1  ">
+  <div class ="flex-grow-1">
     <div class="cards scrolling">
       <% @users.each do |user| %>
         <div class="card-index-user user-<%= user.id %>" data-user-id="<%= user.id %>">
           <%= link_to(user_path(user)) do %>
-              <div class = "range">
-                <% if params[:range].present? %>
-                  <h3 class ="small-size m-0"><%= ((Geocoder::Calculations.distance_between([params[:longitude],params[:latitude]], [user.longitude, user.latitude])).round(2)) %>km</h3>
-                <% else %>
-                  <h3 class ="small-size m-0"></h3>
-                <% end %>
-              </div>
-            <div class="d-flex align-items-center">
+            <div class="d-flex">
               <div>
                 <%= cl_image_tag user.photo.key, crop: :thumb, gravity: :face, class: "xsmall-avatar" %>
               </div>
-              <div class="ml-3">
-                <h4 class="small-size "><%= user.first_name %></h4>
+              <div class="card-index-user-info">
+                <div class="username">
+                  <h4 class="small-size"><%= user.first_name %></h4>
+                  <% if params[:range].present? %>
+                  <span><i class="fas fa-map-marker-alt"></i> <%= ((Geocoder::Calculations.distance_between([params[:longitude],params[:latitude]], [user.longitude, user.latitude])).round(2)) %>km</span>
+                  <% end %>
+                </div>
                 <h2 class ="xsmall-size"><%= user.job.upcase %></h2>
-                <h2 class ="xsmall-size"><%= user.status %></h2>
+                <h3 class ="xsmall-size"><%= user.status %></h2>
               </div>
             </div>
           <% end %>

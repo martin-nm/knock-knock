@@ -1,14 +1,13 @@
-const animateOnBombClick = () => {
-  const cards = document.querySelectorAll(".for-animation");
+const choppeCardsForFeed = () => {
+  const cards = document.querySelectorAll(".card-post");
   cards.forEach((card) => {
-    const bomb = card.querySelector('#bomb');
-    // bomb.addEventListener('click', (event) => {
-    //   event.preventDefault();
-    //   setTimeout(() => {console.log("ok")}, 2000);
-    //   setTimeout(() => {console.log("hello")}, 4000);
-    // });
-
+    card.addEventListener('mouseenter', (event) => {
+      card.lastElementChild.firstElementChild.style.display = "block";
+    });
+    card.addEventListener('mouseleave', (event) => {
+      card.lastElementChild.firstElementChild.style.display = "none";
+    });
   })
 };
 
-export { animateOnBombClick };
+export { choppeCardsForFeed };

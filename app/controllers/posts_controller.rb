@@ -11,16 +11,16 @@ class PostsController < ApplicationController
     end
 
     @expired_posts = []
-    @all_posts = Post.all.to_ary
+    @all_posts = Post.all.order(created_at: :desc).to_ary
 
     @all_posts.each do |post|
       @expired_posts << post if post.expires_at < Time.zone.now
     end
 
-    @posts = Post.all.to_ary - @excluded_posts - @expired_posts
-    @community_posts = Post.where(category: 'Community').to_ary - @excluded_posts - @expired_posts
-    @utility_posts = Post.where(category: 'Utility').to_ary - @excluded_posts - @expired_posts
-    @expertise_posts = Post.where(category: 'Expertise').to_ary - @excluded_posts - @expired_posts
+    @posts = Post.all.order(created_at: :desc).to_ary - @excluded_posts - @expired_posts
+    @community_posts = Post.where(category: 'Community').order(created_at: :desc).to_ary - @excluded_posts - @expired_posts
+    @utility_posts = Post.where(category: 'Utility').order(created_at: :desc).to_ary - @excluded_posts - @expired_posts
+    @expertise_posts = Post.where(category: 'Expertise').order(created_at: :desc).to_ary - @excluded_posts - @expired_posts
   end
 
   def new

@@ -23,8 +23,11 @@ const initChat = () => {
               messages.scrollTop = messages.scrollHeight;
             } else {
               const newLink = `users/${data.sender_id}/messages/new`
+              console.log(newLink);
               const notification = document.getElementById('notifications');
               const linkTo = notification.querySelector("a");
+              console.log(notification);
+              console.log(linkTo);
               linkTo.href = newLink;
               notification.classList.add("active", "animated", "tada");
               // window.alert("You have a new conversation!")
@@ -34,8 +37,11 @@ const initChat = () => {
           } else {
             // window.alert("You have a new message!")
               const newLink = `users/${data.sender_id}/messages/new`
+              console.log(newLink);
               const notification = document.getElementById('notifications');
               const linkTo = notification.querySelector("a");
+              console.log(notification);
+              console.log(linkTo);
               linkTo.href = newLink;
               notification.classList.add("active", "animated", "tada");
           }

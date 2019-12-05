@@ -24,14 +24,13 @@
 }
 
 .card-post {
+  position: relative;
   background: $corail-transparent;
   border-radius: 20px;
-  height: auto;
   padding: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .card-post h2 {
@@ -40,7 +39,6 @@
 }
 
 .card-post-info {
-  margin-left: 2px;
   border-bottom: 2px solid $middle-purple-transparent;
 }
 
@@ -66,6 +64,9 @@
 
 .card-post-content {
   line-height:26px;
+  p {
+    word-break: break-word;
+  }
 }
 
 .content {
@@ -74,29 +75,29 @@
 
 .card-post:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.flexbox {
-  display: flex;
+  .btn-4tiary-delete,
+  .btn-4tiary-chat {
+    opacity: 1;
+  }
 }
 
 .content {
   line-height:70px;
 }
 .cat-remove {
-justify-content: space-between;
-color: $white;
-height: 20px;
-border-radius:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .category {
-  border-radius:20px;
+  border-radius: 20px;
   background-color: $corail;
   color: $white;
-  width:100px;
-  height:30px;
   text-align: center;
+  font-size: 12px;
+  padding: 3.5px 0px;
+  flex: 0 0 50%;
 }
 
 .remove {
@@ -109,7 +110,7 @@ border-radius:20px;
 }
 
 .padding-category {
-  padding-top: 8px;
+  padding-top: 3.5px;
   font-size: 12px;
 }
 
@@ -119,8 +120,8 @@ border-radius:20px;
 
 .new-post {
   position: absolute;
-  right: 20px;
-}
+  right: 40px;
+  bottom: 12px;}
 
 .avatar-post img {
   width: 60px;
@@ -140,4 +141,37 @@ border-radius:20px;
   border-right: none !important;
 }
 
+#bomb {
+  position: absolute;
+  top: 0px;
+  right: 14px;
+  text-decoration: none !important;
+  width: 10px;
+  height: 10px;
+}
 
+.card-post progress {
+  position: relative;
+  width: 70px;
+  margin-top: 4px;
+  margin-right: 30px;
+  &:before {
+    content: "Expires in";
+    position: absolute;
+    top: -4px;
+    left: 2px;
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  &:after {
+    content: attr(content);
+    position: absolute;
+    right: -23px;
+    top: -1px;
+    opacity: 0.5;
+    font-size: 12px;
+
+  }
+}

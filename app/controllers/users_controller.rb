@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def index
     if params[:range].present?
-      @users = User.near([params[:latitude], params[:longitude]], params[:range])
+      @users = User.where.not(id: current_user.id).near([params[:latitude], params[:longitude]], params[:range])
     else
-      @users = User.geocoded
+      @users = User.where.not(id: current_user.id).geocoded
     end
     @markers = @users.map do |user|
       {

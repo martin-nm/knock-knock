@@ -1,9 +1,9 @@
-<div class="big-container">
+<div class="big-container user-index-right-container">
     <div class= "top-banner">
       <h3 class="small-size text-right p-3 " id="corail">  <%=Date.today.to_s(:long) %></h3>
     </div>
 
-    <div class="welcome p-4">
+    <div class="welcome">
       <h3 class="middle-size" id="white">Welcome back <span><%= current_user.first_name.capitalize %></span>!</h3>
       <div class="image-welcome"><%= image_tag "test-index.svg", width:250 %></div>
     </div>

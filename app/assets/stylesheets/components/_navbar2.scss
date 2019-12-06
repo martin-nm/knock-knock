@@ -1,9 +1,11 @@
 .navbar-frame {
-  width: 25vw;
+  width: 270px;
   position: sticky;
   top:0;
-  padding: 20px 0px 20px 20px;
-  height: 100vh;
+  // padding: 20px 0px 20px 20px;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-title {
@@ -50,24 +52,13 @@
 }
 
 .menu {
-
   background-color:$testv;
-  height:64vh;
-  width: 20vw;
-  min-width: 180px;
   border-radius: 0px 0px 20px 20px;
-  position: sticky;
-  top:0;
 }
 .profil {
   background-color:$testf;
-  height:31vh;
-  width: 20vw;
   padding: 1rem;
-  min-width: 180px;
   border-radius: 20px 20px 0px 0px;
-  position: sticky;
-  top:0;
 }
 
 .icone_menu {
@@ -99,8 +90,8 @@
 
 .logout {
     position: absolute;
-    right: 19px;
-    bottom: 22px;
+    right: 7px;
+    bottom: 30px;
 }
 
 

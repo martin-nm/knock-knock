@@ -244,29 +244,58 @@ celine.save!
 
 puts 'Finished Celine'
 
-philippe = User.new(first_name: "Philippe",
+philippe = User.new(
+  first_name: "Philippe",
   last_name: "de Salle",
   email: "philippe-desalle@gmail.com",
-  password:"123456", job: "Software Engineer C++",
+  password:"123456",
+  job: "Software Engineer C++",
   bio: "Experienced in C++ 98/03, familiar with C++ 11/14. Very interested in learning new technologies, I can learn fast and have a clean code. Using the 1% improvement rule, I like to get better in everything I do.",
-  status:"Besoin de motion design tips",
-  location: "48 rue Boulard, 75014 Paris")
+  status: "Need help with motion design tips",
+  location: "10 rue Yves Toudic"
+)
 
 file = URI.open('https://images.unsplash.com/photo-1544098485-2a2ed6da40ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 philippe.photo.attach(io: file, filename: 'philippe-image.jpg', content_type: 'image/jpg')
-
 philippe.save!
 
 puts 'Finished Philippe'
+
+priscille = User.new(
+  first_name: "Priscille",
+  last_name: "Toulemonde",
+  email: "priscilletoulemonde@gmail.com",
+  password:"123456",
+  job: "Motion Designer",
+  bio: "",
+  status:"",
+  location: "52 ter Rue des Vinaigriers"
+)
+
+file = URI.open('https://i.imgur.com/6XSLlFS.jpg')
+priscille.photo.attach(io: file, filename: 'priscille-image.jpg', content_type: 'image/jpg')
+priscille.save!
+
+puts 'Finished Priscille'
 
 puts "Users done 🤓"
 
 puts 'Creating posts...'
 
-post_aline = Post.new( title: "Battery Charger Urgency",
-  content: "Hello knock-knock, I forgot my MacBook charger (13 pouces 2015) and I really need to finish a work, someone gots one to lend me ? Actually at Numa's café (in the 10th) but I can move around. xx ",
-  category: "Utility",
-  expires_at: "16h".to_datetime)
+Post.create!(
+  title: "Motion profile needed",
+  content: "Hello techies. I am looking for people who can freelance in motion design domain. The project is a policy manager app for an insurance company. Message me 👨‍💻",
+  category: "Expertise",
+  expires_at: 10.hours.from_now,
+  user: philippe
+)
+
+post_aline = Post.new(
+  title: "Freelancing advise needed",
+  content: "I need advise on freelance status. Anyone who wants to share their experience with me over lunch? Its on me 👻!!",
+  category: "Community",
+  expires_at: "16h".to_datetime
+)
 post_aline.user = aline
 post_aline.save!
 
@@ -290,9 +319,10 @@ post_louis.save!
 
 puts 'Finished Post Louis'
 
-post_eliza = Post.new( title: "Quelqu'un connait codeur.com ?",
-  content: "https://www.codeur.com/users/c/developpement",
-  category:"Expertise",
+post_eliza = Post.new(
+  title: "YOGA 🙏",
+  content: "Hello beautiful knockies!! I’m a freelance front developer, and I would like to practice some sport on my working days. For this I’ve started a yoga group nearby l’Étoile, and we have some spots still available. Don’t hesitate to contact me if you wanna join Lots of love 💕",
+  category:"Community",
   expires_at: "21h".to_datetime)
 post_eliza.user = eliza
 post_eliza.save!
@@ -325,6 +355,17 @@ post_marine.user = marine
 post_marine.save!
 
 puts 'Finished Post Marine'
+
+Post.create!(
+  title: "React lessons special offer",
+  category: "Expertise",
+  content: "Hello digital people 👋🏽
+    I am offering half price lessons on React. If interested, just knock-knock
+    ✊🏽 on my chat 🙂",
+  user: paul,
+  expires_at: 15.hours.from_now
+)
+puts 'Finished Post Paul'
 
 puts 'Finished Posts 🤓'
 

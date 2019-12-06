@@ -6,16 +6,13 @@
 
 .cards.scrolling{
   overflow: scroll;
-  height:400px;
-  margin-top:67px
 }
 
 .card-index-user {
   border: 2px solid transparent;
   border-radius: 20px;
   background-color: $white;
-  padding: 20px;
-  height: 120px;
+  padding: 10px 20px;
 }
 
 .card-index-user:active {
@@ -32,21 +29,21 @@
 }
 
 .map-box {
-  height: 490px;
-  width: 650px;
-  border-radius: 20px;
-  margin-right: 40px;
+  height: 100%;
+  // width: 650px;
+  // border-radius: 20px;
+  // margin-right: 40px;
 }
 
-.big-container{
-    width: 100%;
-    padding: 30px 50px;
-    margin-right: auto;
-    margin-left: auto;
+.big-container {
+    padding-left: 50px;
 }
 
 .btn-localisation{
-  width: 650px
+  padding: 15px;
+  .localize {
+    margin: 0px 1em;
+  }
 }
 
 .profile-card {

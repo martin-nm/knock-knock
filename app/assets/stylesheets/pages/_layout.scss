@@ -1,3 +1,11 @@
 .page-contenu {
   width:100%;
 }
+
+.all-contenu {
+  padding: 20px;
+  padding-right: 50px;
+  background-image: asset-url("template-page.svg");
+  background-size: cover;
+  background-position: center;
+}

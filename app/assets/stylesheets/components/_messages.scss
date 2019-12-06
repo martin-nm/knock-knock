@@ -25,7 +25,6 @@
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
-  height: 71vh;
   overflow: auto;
   overflow-x: hidden;
   background-color: $white-transparent;
@@ -67,15 +66,6 @@
   margin: 10px 109px;
   width: 60%;
 
-}
-
-::-webkit-scrollbar {
-  height:0px
-
-}
-
-::-webkit-scrollbar-track { // set style to track
-background : transparent;
 }
 
 #message_text {
@@ -164,13 +154,6 @@ background : transparent;
   flex: 1;
 }
 
-.top-banner {
-  background: $white;
-  height: 47px;
-  opacity: 0.8;
-  border-radius: 20px;
-}
-
 
 .form-chat .form-group {
   margin: 0;
@@ -186,4 +169,13 @@ background : transparent;
     bottom: -168px;
     z-index: -1;
     width: 388px;
+}
+
+.knock-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 117px);
+  .messages-container {
+    flex-grow: 1;
+  }
 }

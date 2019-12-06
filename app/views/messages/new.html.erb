@@ -13,26 +13,28 @@
   </div> -->
 
 
-
-  <div class="messages-container">
-    <div class="welcome-container">
-      <%= image_tag "logo-knock-couleur.svg",width:150 %>
-      <h3 class="small-size mt-2" >Start chatting!</h3>
+  <div class="knock-chat-container">
+    <div class="messages-container">
+      <div class="welcome-container">
+        <%= image_tag "logo-knock-couleur.svg",width:150 %>
+        <h3 class="small-size mt-2" >Start chatting!</h3>
+      </div>
+      <% @messages.each do |message| %>
+        <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
+      <% end %>
     </div>
-    <% @messages.each do |message| %>
-      <%= render 'message', message: message, current_user_role: message.sender == current_user ? :sender : :recipient %>
-    <% end %>
+
+    <div class="form-chat">
+          <%= simple_form_for([@user, @message], remote: true) do |f| %>
+            <%= f.input :text, placeholder: "Type your message", label: false %>
+            <%#= f.submit "KNOCK", class: "btn-submit", id: "submit-button" %>
+            <%= button_tag(:type => 'submit', :class => 'btn-submit', id: 'submit-button') do %>
+             <i class="fas fa-paper-plane"></i>
+            <% end %>
+          <% end %>
+    </div>
   </div>
 
-  <div class="form-chat">
-        <%= simple_form_for([@user, @message], remote: true) do |f| %>
-          <%= f.input :text, placeholder: "Type your message", label: false %>
-          <%#= f.submit "KNOCK", class: "btn-submit", id: "submit-button" %>
-          <%= button_tag(:type => 'submit', :class => 'btn-submit', id: 'submit-button') do %>
-           <i class="fas fa-paper-plane"></i>
-          <% end %>
-        <% end %>
-  </div>
 
 </div>
 

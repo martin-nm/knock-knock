@@ -1,7 +1,12 @@
+.user-index-right-container {
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
 
 .top-banner {
   background: $white;
-  height: 47px;
   opacity: 0.8;
   border-radius: 20px;
   margin-bottom: 2em;
@@ -11,18 +16,21 @@
 .welcome {
   background: $corail;
   border-radius:20px;
-  height: 80px;
+  padding: 20px 25px;
   position: relative;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   span {
     color: $purple;
+  }
+  h3 {
+    margin-bottom: 0px;
   }
 }
 
 .image-welcome {
     position: absolute;
     right: 85px;
-    top: -127px;
+    top: -137px;
 }
 
 
@@ -31,8 +39,29 @@
   object-fit: cover;
 }
 
+#map_and_list {
+  flex: 1;
+}
+
 .results {
   margin-left: 25px;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  h1 {
+    margin-bottom: 0px;
+  }
+}
+
+.user-index-main-content {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 270px);
+  .main-content-map {
+    flex: 0 0 67%;
+  }
+  .main-content-users-list {
+    flex: 0 0 250px;
+    height: calc(100vh - 270px);
+    overflow-y: scroll;
+  }
 }
 

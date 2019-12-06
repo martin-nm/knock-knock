@@ -294,7 +294,7 @@ post_aline = Post.new(
   title: "Freelancing advise needed",
   content: "I need advise on freelance status. Anyone who wants to share their experience with me over lunch? Its on me 👻!!",
   category: "Community",
-  expires_at: "16h".to_datetime
+  expires_at: "23h".to_datetime
 )
 post_aline.user = aline
 post_aline.save!
@@ -304,7 +304,7 @@ puts 'Finished Post Aline'
 post_sam = Post.new( title: "Come on",
   content: "Hello there. I heard about a talk around the topic of 'IA for good' at @Le Wagon that promises to be really interesting, if some of us want to join me and maybe going have a drink after, feel free!",
   category: "Community",
-  expires_at: "17h".to_datetime)
+  expires_at: "22h".to_datetime)
 post_sam.user = sam
 post_sam.save!
 
@@ -313,7 +313,7 @@ puts 'Finished Post Sam'
 post_louis = Post.new( title: "DA experts?",
   content: "Salut les artistes ! There is some graphic designer nearby ? Need 2 or 3 advices about front-end aestetic issues ?",
   category:"Expertise",
-  expires_at: "19h".to_datetime)
+  expires_at: "21h".to_datetime)
 post_louis.user = louis
 post_louis.save!
 
